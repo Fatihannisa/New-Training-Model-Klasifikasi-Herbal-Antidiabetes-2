@@ -1,0 +1,8 @@
+streamlit
+tensorflow
+tflite-runtime
+numpy
+opencv-python-headless
+Pillow
+rembg
+onnxruntime
