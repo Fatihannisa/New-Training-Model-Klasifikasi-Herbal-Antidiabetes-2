@@ -307,6 +307,7 @@ def _normalize_brightness(img):
     lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB).astype(np.float32)
     l, a, b = cv2.split(lab)
     mean_l = l.mean()
+
     if mean_l < 5:
         return img
     l_norm = np.clip(l * (CONFIG["TARGET_BRIGHTNESS"] / mean_l), 0, 255)
@@ -318,14 +319,14 @@ def _clahe_lab(img):
     l, a, b = cv2.split(lab)
     clahe = cv2.createCLAHE(clipLimit=CONFIG["CLAHE_CLIP"], tileGridSize=CONFIG["CLAHE_TILE"])
     l = clahe.apply(l)
-    return cv2.cvtColor(cv2.merge([l, a, b]), cv2.COLOR_LAB2BGR)
+    return cv2.cvtColor( cv2.merge([l, a, b]), cv2.COLOR_LAB2BGR)
 
 def _sharpen_veins(img):
-    blurred = cv2.GaussianBlur(img, (0, 0), sigmaX=3)
+    blurred = cv2.GaussianBlur(img, (0,0), sigmaX=3)
     s = CONFIG["VEIN_STRENGTH"]
     sharp = cv2.addWeighted(img, 1 + s, blurred, -s, 0)
     return np.clip(sharp, 0, 255).astype(np.uint8)
-
+    
 def get_leaf_mask(img):
     work = img.copy()
     hsv = cv2.cvtColor(work, cv2.COLOR_BGR2HSV)
@@ -384,36 +385,56 @@ def preprocess_camera_leaf(img):
     except Exception:
         return cv2.resize(img, CONFIG["IMG_SIZE"])
 
-def to_rgb_input(img):
-    img = cv2.resize(img, CONFIG["IMG_SIZE"], interpolation=cv2.INTER_CUBIC)
-    mask = get_leaf_mask(img)
-    img[mask == 0] = [240, 240, 240]
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB).astype(np.float32)
-    mean = np.array([0.485, 0.456, 0.406]) * 255
-    std = np.array([0.229, 0.224, 0.225]) * 255
-    return (img - mean) / std
+def to_rgb_input(img: np.ndarray) -> np.ndarray:
+  img = cv2.resize(img, CONFIG["IMG_SIZE"], interpolation=cv2.INTER_CUBIC)
+  if img.dtype != np.uint8:
+    img = np.clip(img * 255, 0, 255).astype(np.uint8)
+  mask = get_leaf_mask(img)
+  img[mask == 0] = 0
+  img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB).astype(np.float32)
+  mean = np.array([0.485, 0.456, 0.406]) * 255
+  std  = np.array([0.229, 0.224, 0.225]) * 255
+  img = (img - mean) / std
+  return img
 
-def to_vein_input(img):
-    img = cv2.resize(img, CONFIG["IMG_SIZE"], interpolation=cv2.INTER_CUBIC)
-    mask = get_leaf_mask(img)
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    gray = cv2.bitwise_and(gray, gray, mask=mask)
-    gray = cv2.GaussianBlur(gray, (5, 5), 0)
-    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
-    vein = clahe.apply(gray)
-    vein = cv2.bilateralFilter(vein, d=7, sigmaColor=50, sigmaSpace=50)
-    blur_large = cv2.GaussianBlur(vein, (21, 21), 0)
-    highpass = cv2.subtract(vein, (blur_large * 0.7).astype(np.uint8))
-    sobelx = cv2.Sobel(highpass, cv2.CV_32F, 1, 0, ksize=3)
-    sobely = cv2.Sobel(highpass, cv2.CV_32F, 0, 1, ksize=3)
-    sobel = cv2.magnitude(sobelx, sobely)
-    sobel = cv2.normalize(sobel, None, 0, 255, cv2.NORM_MINMAX).astype(np.uint8)
-    vein = cv2.addWeighted(highpass, 0.45, sobel, 0.75, 0)
-    vein = cv2.normalize(vein, None, 0, 255, cv2.NORM_MINMAX)
-    _, vein = cv2.threshold(vein, 35, 255, cv2.THRESH_TOZERO)
-    vein[mask == 0] = 0
-    vein = vein.astype(np.float32) / 255.0
-    return np.stack([vein, vein, vein], axis=-1)
+def to_vein_input(img: np.ndarray) -> np.ndarray:
+  EDGE_KERNEL_SIZE = (3, 3)
+  EDGE_WEIGHT = 0.50
+  img = cv2.resize(img, CONFIG["IMG_SIZE"], interpolation=cv2.INTER_CUBIC)
+  if img.dtype != np.uint8:
+      if img.max() <= 1.0:
+          img = img * 255.0
+      img = np.clip(img, 0, 255).astype(np.uint8)
+  mask = get_leaf_mask(img)
+  mask_binary = ( mask > 0).astype(np.uint8)
+  gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+  gray = cv2.bitwise_and(gray, gray, mask=mask)
+  gray = cv2.GaussianBlur(gray, (3, 3), 0)
+  clahe = cv2.createCLAHE(clipLimit=1.0, tileGridSize=(8, 8))
+  vein = clahe.apply(gray)
+  vein = cv2.bilateralFilter(vein, d=7, sigmaColor=50, sigmaSpace=50)
+  blur_large = cv2.GaussianBlur(vein, (21, 21), 0)
+  highpass = cv2.subtract(vein, (blur_large * 0.7).astype(np.uint8))
+  sobelx = cv2.Sobel(highpass, cv2.CV_32F, 1, 0, ksize=3)
+  sobely = cv2.Sobel(highpass, cv2.CV_32F, 0, 1, ksize=3)
+  sobel = cv2.magnitude(sobelx, sobely)
+  sobel = cv2.normalize(sobel, None, 0, 255, cv2.NORM_MINMAX).astype(np.uint8)
+  vein = cv2.addWeighted(highpass, 0.20, sobel, 0.80, 0)
+  vein = cv2.normalize(vein, None, 0, 255, cv2.NORM_MINMAX).astype(np.uint8)
+  _, vein = cv2.threshold(vein, 13, 255, cv2.THRESH_TOZERO)
+  edge_kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, EDGE_KERNEL_SIZE)
+  leaf_edge = cv2.morphologyEx(mask, cv2.MORPH_GRADIENT, edge_kernel)
+  leaf_edge = cv2.dilate(leaf_edge, edge_kernel, iterations=1)
+  leaf_edge_float = (leaf_edge.astype(np.float32) * EDGE_WEIGHT)
+  vein = np.maximum(vein.astype(np.float32), leaf_edge_float)
+  vein = np.clip(vein, 0, 255).astype(np.uint8)
+  vein[mask_binary == 0] = 0
+  vein = (vein.astype(np.float32) / 255.0)
+  vein = np.stack(
+      [vein, vein, vein],
+      axis=-1
+  )
+  return vein.astype(np.float32)
 
 def predict(image):
     img = np.array(image.convert("RGB"))
