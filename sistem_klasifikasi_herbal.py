@@ -345,6 +345,13 @@ def get_leaf_mask(img):
     _, clean_mask = cv2.threshold(clean_mask, 127, 255, cv2.THRESH_BINARY)
     return clean_mask
 
+def resize_input_image(img, size=(512, 512)):
+    return cv2.resize(
+        img,
+        size,
+        interpolation=cv2.INTER_AREA
+    )
+    
 def preprocess_camera_leaf(img):
     try:
         _, buffer = cv2.imencode(".png", img)
@@ -439,6 +446,7 @@ def to_vein_input(img: np.ndarray) -> np.ndarray:
 def predict(image):
     img = np.array(image.convert("RGB"))
     img_bgr = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+    img_bgr = resize_input_image(img_bgr, (512, 512))
     processed = preprocess_camera_leaf(img_bgr)
     rgb_input = np.expand_dims(to_rgb_input(processed), 0).astype(np.float32)
     vein_input = np.expand_dims(to_vein_input(processed), 0).astype(np.float32)
