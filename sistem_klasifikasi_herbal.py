@@ -250,7 +250,7 @@ herbal_info = {
         ],
         "catatan": "Disarankan merebus dengan wadah stainless steel atau enamel. Konsumsi dalam jumlah wajar. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
     },
-    "Rosa sp.": {
+    "Rosa sp": {
         "nama_umum": ["Mawar"],
         "status": "Tanaman pembanding",
         "informasi": "Mawar adalah tumbuhan perdu berkayu dan berduri yang terkenal sebagai tanaman hias populer.",
