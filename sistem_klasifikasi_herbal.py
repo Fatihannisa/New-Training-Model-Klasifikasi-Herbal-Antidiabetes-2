@@ -636,7 +636,7 @@ div[data-testid="stFileUploader"] button {
 # =========================================================
 # HEADER COMPONENT
 # =========================================================
-logo_b64 = load_base64("images/diaherb_logo.png")
+logo_b64 = load_base64("images/logo.png")
 
 if logo_b64:
     st.markdown(f"""
