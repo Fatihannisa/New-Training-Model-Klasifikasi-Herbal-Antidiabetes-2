@@ -82,7 +82,7 @@ herbal_info = {
         "tautan_artikel": "https://hellosehat.com/diabetes/daun-sambiloto-untuk-diabetes/",
         "judul_artikel": "Kenali Manfaat Daun Sambiloto untuk Diabetes, Plus Efek Sampingnya",
         "tautan_jurnal": "https://jurnal.ikbis.ac.id/index.php/infokes/article/view/371/221",
-        "judul_jurnal": "AIR REBUSAN DAUN SAMBILOTO (ANDROGRAPHIS PANICULATA) TERHADAP PENURUNAN KADAR GULA DARAH PADA PENDERITA DIABETES MELIITUS",
+        "judul_jurnal": "Putri, A., Santoso, E. B., & Putri, R. T. N. (2021). Air Rebusan Daun Sambiloto ( Andrographis Paniculata ) Terhadap Penurunan Kadar Gula Darah Pada Penderita Diabetes Meliitus Dosen Institut Kesehatan dan Bisnis Surabaya , Jln Medokan Semampir Indah No 27 Mahasiswa Institut Kesehatan dan Bisnis Surabaya ,. Jurnal Info Kesehatan, 11(2), 427–430. https://jurnal.ikbis.ac.id/infokes/article/view/371/221",
         "cara_mengolah": [
             "Sambiloto sebaiknya dikonsumsi setelah makan untuk mencegah sakit maag.",
             "Cuci daun sambiloto sebelum dimasak.",
@@ -118,7 +118,7 @@ herbal_info = {
         "tautan_artikel": "https://hellosehat.com/herbal-alternatif/herbal/manfaat-daun-tapak-dara/",
         "judul_artikel": "7 Manfaat Daun Tapak Dara, Menghambat Kanker hingga Atasi Diabetes",
         "tautan_jurnal": "https://jurnal.unpad.ac.id/farmaka/article/view/47508/pdf",
-        "judul_jurnal": "STUDI IN SILICO SENYAWA - SENYAWA DALAM BUNGA TAPAK DARA (Catharanthus roseus) SEBAGAI ANTIDIABETES MELALUI PENGHAMBATAN ENZIM ALDOSE REDUCTASE",
+        "judul_jurnal": "Taruh, B. R., Mokosuli, Y. S., & Tuda, A. I. (2021). Uji Efektifitas Ekstrak Daun Tapak Dara ( Catharanthus roseus ( L ) G . Don ) Sebagai Penurun Kadar Gula Darah Pada Tikus Putih ( Rattus norvegicus L .). 2(2), 34–41.",
         "cara_mengolah": [
             "Siapkan 5-10 lembar daun tapak dara yang masih segar dan 2 gelas air.",
             "Cuci bersih daun tapak dara di bawah air mengalir.",
@@ -181,7 +181,7 @@ herbal_info = {
         "tautan_artikel": "https://hellosehat.com/diabetes/tipe-2/manfaat-daun-kelor-untuk-diabetes/",
         "judul_artikel": "Mengulik Khasiat Daun Kelor sebagai Obat Diabetes Alami, Benarkah Bermanfaat?",
         "tautan_jurnal": "https://doi.org/10.35617/jfionline.v12i1.21",
-        "judul_jurnal": "Potensi Daun Kelor (Moringa oleifera) sebagai Agen Anti-Hipergikemia: Studi Literatur",
+        "judul_jurnal": "Kusuma, I. Y., Pujiarti, Y., & Samodra, G. (2020). Potensi Daun Kelor (Moringa oleifera) sebagai Agen Anti-Hipergikemia: Studi Literatur : POTENTIAL OF MORINGA LEAF (Moringa oleifera) AS ANTI-HYPERGLICEMIC AGENT: A LITERATUR REVIEW. JFIOnline | Print ISSN 1412-1107 | E-ISSN 2355-696X, 12(1), 94–99. https://doi.org/10.35617/jfionline.v12i1.21",
         "cara_mengolah": [
             "Salah satu cara paling praktis adalah menjadikannya sup bening atau teh herbal.",
             "Untuk membuat sup, cukup rebus bumbu dan sayuran lain terlebih dahulu hingga matang, lalu matikan api kompor.",
@@ -199,7 +199,7 @@ herbal_info = {
         "tautan_artikel": "https://hellosehat.com/herbal-alternatif/herbal/tanaman-kumis-kucing/",
         "judul_artikel": "7 Manfaat Tanaman Kumis Kucing untuk Kesehatan",
         "tautan_jurnal": "https://doi.org/10.36990/hijp.v7i1.533",
-        "judul_jurnal": "Pengaruh Pemberian Ekstrak Daun Kumis Kucing (Orthosiphon Aristatus) Terhadap Perubahan Kadar Glukos Darah Pada Pasien Diabetes Mellitus Di Ruang Rawat Jalan Rumah Sakit Umum Bahteramas Provinsi Sulawesi Tenggara",
+        "judul_jurnal": "Masrif, M., & Ibrahim, I. (2015). Pengaruh Pemberian Ekstrak Daun Kumis Kucing (Orthosiphon Aristatus) Terhadap Perubahan Kadar Glukos Darah Pada Pasien Diabetes Mellitus Di Ruang Rawat Jalan Rumah Sakit Umum Bahteramas Provinsi Sulawesi Tenggara. Health Information : Jurnal Penelitian, 7, 27–33. https://doi.org/10.36990/hijp.v7i1.533",
         "cara_mengolah": [
             "Siapkan 5 sampai 7 lembar daun kumis kucing segar dan 2 sampai 3 gelas air.",
             "Cuci bersih di bawah air mengalir.",
@@ -217,7 +217,7 @@ herbal_info = {
         "tautan_artikel": "https://share.google/BTrQ3MBtqbTndrJvO",
         "judul_artikel": "Manfaat Daun Pandan dan Efek Sampingnya Bagi Tubuh",
         "tautan_jurnal": "https://ejurnalmalahayati.ac.id/index.php/kebidanan/article/view/3024/pdf",
-        "judul_jurnal": "PEMBERIAN AIR DAUN PANDAN TERHADAP PENURUNAN KADAR GULA DARAHPADA PASIEN DIABETES ",
+        "judul_jurnal": "Kaban, N. B., Putri, P. S., & Medan, S. F. (2020). PEMBERIAN AIR DAUN PANDAN TERHADAP PENURUNAN KADAR GULA DARAH. 6(4), 493–496.",
         "cara_mengolah": [
             "Siapkan 3-4 lembar daun pandan segar/kering, 500 ml air, dan pemanis alami jika diperlukan.",
             "Cuci bersih lalu potong menjadi beberapa bagian.",
@@ -236,7 +236,7 @@ herbal_info = {
         "tautan_artikel": "https://www.halodoc.com/artikel/manfaat-pohon-meniran-jaga-imun-ginjal-sehat-alami",
         "judul_artikel": "Manfaat Pohon Meniran: Jaga Imun, Ginjal Sehat Alami",
         "tautan_jurnal": "https://doi.org/10.36656/jpfh.v2i1.79",
-        "judul_jurnal": "UJI EFEKTIVITAS ANTIDIABETES KOMBINASI EKSTRAK DAUN MENIRAN (Phyllanthus niruri L.) Dan KELOPAK BUNGA ROSELLA (Hibiscus sabdariffa L.) PADA TIKUS JANTAN PUTIH",
+        "judul_jurnal": "Sari, H., Kaban, V. E., Situmorang, F. R., Fahdi, F., Kesehatan, I., Husada, D., Besar, J., & Deli, N. (2019). UJI EFEKTIVITAS ANTIDIABETES KOMBINASI EKSTRAK DAUN MENIRAN ( Phyllanthus niruri L .) Dan KELOPAK BUNGA ROSELLA ( Hibiscus sabdariffa L .) PADA TIKUS JANTAN PUTIH Purpose : To determine the effect of decreasing blood glucose levels in white rats using a c. 2(1).",
         "cara_mengolah": [
             "Siapkan 20 batang atau 3gram daun meniran dan 400 ml air.",
             "Cuci bersih di bawah air mengalir.",
@@ -254,7 +254,7 @@ herbal_info = {
         "tautan_artikel": "https://www.halodoc.com/artikel/pohon-ciplukan-dan-khasiatnya-dari-diabetes-hingga-kanker",
         "judul_artikel": "Pohon Ciplukan dan Khasiatnya: Dari Diabetes Hingga Kanker",
         "tautan_jurnal": "https://journal.ukmc.ac.id/index.php/joh/article/view/1141/1081",
-        "judul_jurnal": "Uji Aktivitas Antidiabetes Kombinasi Ekstrak Etanol Daun Ciplukan (Physalis AngulataL.) dan MaduHutanTerhadap Mencit Putih Jantan yang Diinduksi Streptozotocin",
+        "judul_jurnal": "Azizah, M., & Agustina, C. (2024). Uji Aktivitas Antidiabetes Kombinasi Ekstrak Etanol Daun Ciplukan ( Physalis Angulata L . ) dan Madu Hutan Terhadap Mencit Putih Jantan yang Diinduksi Streptozotocin. 7(1), 189–197. https://doi.org/10.32524/jksp.v7i1.1141",
         "cara_mengolah": [
             "Siapkan beberapa lembar daun ciplukan segar dan beberapa gelas air.",
             "Cuci bersih daun di bawah air mengalir.",
@@ -290,7 +290,7 @@ herbal_info = {
         "tautan_artikel": "https://www.halodoc.com/artikel/daun-salam-khasiat-dan-cara-konsumsi-sehat",
         "judul_artikel": "Daun Salam: Khasiat dan Cara Konsumsi Sehat",
         "tautan_jurnal": "https://doi.org/10.3164/jcbn.08-188",
-        "judul_jurnal": "Bay Leaves Improve Glucose and Lipid Profile of People with Type 2 Diabetes",
+        "judul_jurnal": "Khan, A., Zaman, G., & Anderson, R. A. (2009). Bay leaves improve glucose and lipid profile of people with type 2 diabetes. Journal of clinical biochemistry and nutrition, 44(1), 52–56. https://doi.org/10.3164/jcbn.08-188",
         "cara_mengolah": [
             "Siapkan 10-15 lembar daun salam segar atau kering dan 3 gelas air.",
             "Cuci bersih daun salam.",
@@ -308,7 +308,7 @@ herbal_info = {
         "tautan_artikel": "https://hellosehat.com/herbal-alternatif/herbal/manfaat-daun-afrika/",
         "judul_artikel": "7 Manfaat Daun Afrika bagi Kesehatan Tubuh, Jangan Lewatkan!",
         "tautan_jurnal": "https://www.neliti.com/id/publications/460123/potensi-daun-afrika-vernonia-amygdalina-sebagai-antidiabetik",
-        "judul_jurnal": "Potensi Daun Afrika ( Vernonia Amygdalina ) sebagai Antidiabetik",
+        "judul_jurnal": "Putri, Yunisa A. "Potensi Daun Afrika ( Vernonia Amygdalina ) sebagai Antidiabetik." Jurnal Ilmiah Kesehatan Sandi Husada, vol. 8, no. 2, 2019, pp. 336-339, doi:10.35816/jiskh.v10i2.183.",
         "cara_mengolah": [
             "Siapkan 5-10 lembar daun Afrika dan 4 gelas air.",
             "Cuci bersih di bawah air mengalir.",
@@ -326,7 +326,7 @@ herbal_info = {
         "tautan_artikel": "https://hellosehat.com/herbal-alternatif/herbal/daun-bidara/",
         "judul_artikel": "Daun Bidara: Kandungan, Manfaat, Efek Samping, dll.",
         "tautan_jurnal": "https://doi.org/10.3390/plants13162195",
-        "judul_jurnal": "Ziziphus mauritiana Lam. Bark and Leaves: Extraction, Phytochemical Composition, In Vitro Bioassays and In Silico Studies",
+        "judul_jurnal": "Nilofar, Sinan, K. I., Dall’Acqua, S., Sut, S., Uba, A. I., Etienne, O. K., Ferrante, C., Ahmad, J., & Zengin, G. (2024). Ziziphus mauritiana Lam. Bark and Leaves: Extraction, Phytochemical Composition, In Vitro Bioassays and In Silico Studies. Plants, 13(16), 2195. https://doi.org/10.3390/plants13162195",
         "cara_mengolah": [
             "Siapkan 5 hingga 7 lembar daun bidara segar yang tidak terlalu tua atau terlalu muda dan 400 ml air.",
             "Cuci bersih daun bidara.",
