@@ -756,8 +756,8 @@ elif st.session_state.page == "result":
         img_b64 = base64.b64encode(buffered.getvalue()).decode()
 
         st.markdown(f"""
-            <div class="custom-card" style="text-align: center; padding: 24px;">
-                <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; display: flex; align-items: center; justify-content: center; width: 100%; min-height: 320px;">
+            <div class="custom-card" style="text-align: center; padding: 24px; border: none !important; box-shadow: none !important;">
+                <div style="background-color: #f8fafc; border: none; border-radius: 12px; padding: 20px; display: flex; align-items: center; justify-content: center; width: 100%; min-height: 320px;">
                     <img src="data:image/png;base64,{img_b64}" style="max-height: 290px; max-width: 100%; object-fit: contain; border-radius: 8px; margin: 0 auto; display: block;">
                 </div>
                 <p style="font-size: 15px; color: #64748b; font-style: italic; margin-top: 14px; margin-bottom: 0; font-weight: 500;">Gambar yang Diunggah</p>
@@ -767,7 +767,7 @@ elif st.session_state.page == "result":
         if data:
             nama_umum_list = "".join([f"<li>{n}</li>" for n in data["nama_umum"]])
             st.markdown(f"""
-                <div class="custom-card">
+                <div class="custom-card" style="border: none !important; box-shadow: none !important;">
                     <span style="font-size:16px; font-weight:700; color:#64748b; text-transform:uppercase;">Nama Ilmiah:</span>
                     <div class="scientific-name">{pred_name}</div>
                     <span style="font-size:16px; font-weight:700; color:#64748b; text-transform:uppercase;">Nama Umum:</span>
