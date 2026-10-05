@@ -84,11 +84,13 @@ herbal_info = {
         "tautan_jurnal": "https://jurnal.ikbis.ac.id/index.php/infokes/article/view/371/221",
         "judul_jurnal": "AIR REBUSAN DAUN SAMBILOTO (ANDROGRAPHIS PANICULATA) TERHADAP PENURUNAN KADAR GULA DARAH PADA PENDERITA DIABETES MELIITUS",
         "cara_mengolah": [
-            "Siapkan 25 lembar daun sambiloto segar dan 110 ml air bersih.",
-            "Cuci bersih daun sambiloto di bawah air mengalir.",
-            "Rebus daun sambiloto sampai air mendidih.",
-            "Minum air rebusan daun sambiloto satu kali sehari dengan takaran 100 ml."
+            "Sambiloto sebaiknya dikonsumsi setelah makan untuk mencegah sakit maag.",
+            "Cuci daun sambiloto sebelum dimasak.",
+            "Rebuslah daun sambiloto dengan 2–3 gelas air hingga matang, lalu diminum.",
+            "Untuk mengurangi rasa pahit sambiloto, bisa juga menambahkan madu."
         ],
+        "tautan_pengolahan": "https://www.alodokter.com/sambiloto",
+        "sumber_pengolahan": "Alodokter - Sambiloto",
         "catatan": "Untuk menghindari risiko efek samping, disarankan untuk mengonsumsi dalam jumlah yang wajar dan tidak lebih dari dua kali sehari. Jika memiliki kondisi medis tertentu, konsultasikan terlebih dahulu dengan dokter."
     },
     "Cananga odorata": {
@@ -120,9 +122,11 @@ herbal_info = {
         "cara_mengolah": [
             "Siapkan 5-10 lembar daun tapak dara yang masih segar dan 2 gelas air.",
             "Cuci bersih daun tapak dara di bawah air mengalir.",
-            "Rebus daun dengan api kecil sampai air berubah warna.",
-            "Saring dan biarkan hingga hangat sebelum diminum."
+            "Rebus daun dengan api kecil hingga mendidih (sekitar 10-15 menit) sampai air rebusan berubah warna.",
+            "Saring dan biarkan sedikit dingin sebelum diminum. Disarankan mengonsumsinya satu gelas sehari"
         ],
+        "tautan_pengolahan": "https://www.liputan6.com/hot/read/5928688/cara-merebus-daun-tapak-dara-mampu-atasi-kolesterol-dan-diabetes-mellitus",
+        "sumber_pengolahan": "Liputan 6 - Cara Merebus Daun Tapak Dara, Mampu Atasi Kolesterol dan Diabetes Mellitus",
         "catatan": "Disarankan mengonsumsi satu gelas sehari. Jika memiliki kondisi medis tertentu, konsultasikan terlebih dahulu dengan dokter."
     },
     "Dracaena angustifolia": {
@@ -179,11 +183,13 @@ herbal_info = {
         "tautan_jurnal": "https://doi.org/10.35617/jfionline.v12i1.21",
         "judul_jurnal": "Potensi Daun Kelor (Moringa oleifera) sebagai Agen Anti-Hipergikemia: Studi Literatur",
         "cara_mengolah": [
-            "Siapkan segenggam daun kelor (10-15 gram) dan 600 ml air.",
-            "Cuci bersih daun kelor di bawah air mengalir.",
-            "Panaskan air hingga mendidih, lalu masukkan daun kelor dan rebus 5-15 menit.",
-            "Saring air rebusan untuk diminum. Daun rebusan tetap bisa dikonsumsi sebagai lalapan."
+            "Salah satu cara paling praktis adalah menjadikannya sup bening atau teh herbal.",
+            "Untuk membuat sup, cukup rebus bumbu dan sayuran lain terlebih dahulu hingga matang, lalu matikan api kompor.",
+            "Masukkan daun kelor segar ke dalam kuah panas dan biarkan layu secara alami selama 2–3 menit sebelum disajikan.",
+            "Kunci utama mengolah daun kelor adalah menghindari paparan suhu tinggi dalam waktu yang lama. Pemanasan berlebih dapat menghancurkan vitamin C dan senyawa antioksidan sensitif seperti quercetin dan asam klorogenat."
         ],
+        "tautan_pengolahan": "https://www.halodoc.com/artikel/ini-cara-mengolah-daun-kelor-agar-manfaatnya-maksimal?srsltid=AU7gw4VTzmXCONXyFP9MVyjgNw3h2hMtKAKY8oY1IKRvwfGmYRp0qytS",
+        "sumber_pengolahan": "Halodoc - Ini Cara Mengolah Daun Kelor agar Manfaatnya Maksimal"
         "catatan": "Konsumsi dalam jumlah wajar. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
     },
     "Orthosiphon aristatus": {
@@ -195,11 +201,13 @@ herbal_info = {
         "tautan_jurnal": "https://doi.org/10.36990/hijp.v7i1.533",
         "judul_jurnal": "Pengaruh Pemberian Ekstrak Daun Kumis Kucing (Orthosiphon Aristatus) Terhadap Perubahan Kadar Glukos Darah Pada Pasien Diabetes Mellitus Di Ruang Rawat Jalan Rumah Sakit Umum Bahteramas Provinsi Sulawesi Tenggara",
         "cara_mengolah": [
-            "Siapkan segenggam daun kumis kucing (10-15 gram) dan 500 ml air.",
+            "Siapkan 5 sampai 7 lembar daun kumis kucing segar dan 2 sampai 3 gelas air.",
             "Cuci bersih di bawah air mengalir.",
-            "Rebus selama 15-20 menit.",
-            "Saring air rebusan dan minum 2-3 kali sehari."
+            "Rebus hingga mendidih hingga airnya tersisa setengah.",
+            "Saring air rebusan dan minum 1-2 kali sehari, masing-masing setengah gelas."
         ],
+        "tautan_pengolahan": "https://health.detik.com/berita-detikhealth/d-7483374/cara-mengolah-tanaman-kumis-kucing-kerap-digunakan-untuk-mengatasi-diabetes",
+        "sumber_pengolahan": "Detik health - Cara Mengolah Tanaman Kumis Kucing, Kerap Digunakan untuk Mengatasi Diabetes",
         "catatan": "Konsumsi dalam jumlah wajar. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
     },
     "Pandanus amaryllifolius": {
@@ -211,11 +219,14 @@ herbal_info = {
         "tautan_jurnal": "https://ejurnalmalahayati.ac.id/index.php/kebidanan/article/view/3024/pdf",
         "judul_jurnal": "PEMBERIAN AIR DAUN PANDAN TERHADAP PENURUNAN KADAR GULA DARAHPADA PASIEN DIABETES ",
         "cara_mengolah": [
-            "Siapkan 3-4 lembar daun pandan segar/kering dan 500 ml air.",
-            "Cuci bersih dan potong menjadi beberapa bagian.",
-            "Rebus dalam air mendidih selama 10-15 menit hingga air berwarna hijau kekuningan.",
-            "Saring air rebusan dan minum hangat."
+            "Siapkan 3-4 lembar daun pandan segar/kering, 500 ml air, dan pemanis alami jika diperlukan.",
+            "Cuci bersih lalu potong menjadi beberapa bagian.",
+            "Rebus air hingga mendidih.",
+            "Biarkan daun pandan direbus selama 10-15 menit hingga air berwarna hijau kekuningan.",
+            "Saring air rebusan, tambahkan pemanis alami jika diinginkan, dan teh daun pandan siap dinikmati."
         ],
+        "tautan_pengolahan": "https://health.grid.id/read/354114602/cara-mengolah-daun-pandan-untuk-mengontrol-gula-darah-tinggi?page=all",
+        "sumber_pengolahan": "Health grid - Cara Mengolah Daun Pandan untuk Mengontrol Gula Darah Tinggi.",
         "catatan": "Hindari menambahkan gula pasir tinggi kalori; gunakan pemanis alami jika diperlukan. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
     },
     "Phyllanthus amarus": {
@@ -227,11 +238,13 @@ herbal_info = {
         "tautan_jurnal": "https://doi.org/10.36656/jpfh.v2i1.79",
         "judul_jurnal": "UJI EFEKTIVITAS ANTIDIABETES KOMBINASI EKSTRAK DAUN MENIRAN (Phyllanthus niruri L.) Dan KELOPAK BUNGA ROSELLA (Hibiscus sabdariffa L.) PADA TIKUS JANTAN PUTIH",
         "cara_mengolah": [
-            "Siapkan segenggam daun meniran segar (10-15 gram) dan 3 gelas air.",
+            "Siapkan 20 batang atau 3gram daun meniran dan 400 ml air.",
             "Cuci bersih di bawah air mengalir.",
-            "Rebus hingga air menyusut sekitar 1 gelas.",
-            "Saring dan konsumsi selagi hangat 1-2 kali sehari."
+            "Rebus selama 5-10 menit.",
+            "Minum rebusan ini dua kali sehari, pagi dan sore."
         ],
+        "tautan_pengolahan": "https://www.halodoc.com/artikel/meniran-obat-apa-manfaat-dan-cara-pakai-lengkap?srsltid=AU7gw4VrbrsEBXiYIODpm-gKSpYE8iqwQMKZpT2-sFiNL6_hPO3P994F",
+        "sumber_pengolahan": "Halodoc - Meniran Obat Apa? Manfaat dan Cara Pakai Lengkap!",
         "catatan": "Konsumsi dalam jumlah wajar. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
     },
     "Physalis angulata": {
@@ -243,13 +256,13 @@ herbal_info = {
         "tautan_jurnal": "https://journal.ukmc.ac.id/index.php/joh/article/view/1141/1081",
         "judul_jurnal": "Uji Aktivitas Antidiabetes Kombinasi Ekstrak Etanol Daun Ciplukan (Physalis AngulataL.) dan MaduHutanTerhadap Mencit Putih Jantan yang Diinduksi Streptozotocin",
         "cara_mengolah": [
-            "Siapkan 10-15 gram daun ciplukan segar dan 3 gelas air (600 ml).",
+            "Siapkan beberapa lembar daun ciplukan segar dan beberapa gelas air.",
             "Cuci bersih daun di bawah air mengalir.",
-            "Rebus dengan api sedang (hindari panci aluminium) hingga menyusut jadi 1 gelas.",
-            "Saring dan minum 1-2 kali sehari."
+            "Rebus hingga mendidih hingga airnya berkurang.",
+            "Saring air rebusan dan minum secara teratur sesuai kebutuhan."
         ],
-        "tautan_pengolahan": "https://hellosehat.com/herbal-alternatif/herbal/daun-ciplukan/", # <-- Tambahkan URL di sini
-        "sumber_pengolahan": "Hello Sehat - Panduan Pengolahan Daun Ciplukan", 
+        "tautan_pengolahan": "https://www.halodoc.com/artikel/daun-ciplukan-untuk-obat-apa-atasi-diabetes-hingga-rematik?srsltid=AU7gw4XZFvyyCQRZZfNnPoGNmfVcVVEhXwI261HcyUPnUzAVODxwGfBz",
+        "sumber_pengolahan": "Halodoc - Daun Ciplukan untuk Obat Apa? Atasi Diabetes Hingga Rematik", 
         "catatan": "Disarankan merebus dengan wadah stainless steel atau enamel. Konsumsi dalam jumlah wajar. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
     },
     "Rosa sp": {
@@ -279,11 +292,13 @@ herbal_info = {
         "tautan_jurnal": "https://doi.org/10.3164/jcbn.08-188",
         "judul_jurnal": "Bay Leaves Improve Glucose and Lipid Profile of People with Type 2 Diabetes",
         "cara_mengolah": [
-            "Siapkan 10-15 lembar daun salam segar dan 600 ml air (3 gelas).",
+            "Siapkan 10-15 lembar daun salam segar atau kering dan 3 gelas air.",
             "Cuci bersih daun salam.",
-            "Rebus dengan api sedang sampai menyusut menjadi 1 gelas (200 ml).",
-            "Saring dan minum hangat 2 kali sehari sebelum makan."
+            "Rebus dengan api sedang sampai menyusut menjadi 1 gelas.",
+            "Saring dan minum selagi hangat secara teratur."
         ],
+        "tautan_pengolahan": "https://www.halodoc.com/artikel/cara-mengolah-daun-salam-yang-baik-untuk-kesehatan",
+        "sumber_pengolahan": "Halodoc - Cara Mengolah Daun Salam yang Baik untuk Kesehatan",
         "catatan": "Gunakan wadah perebus yang tidak reaktif terhadap logam dan konsumsi dalam jumlah wajar. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
     },
     "Vernonia amygdalina": {
@@ -298,8 +313,10 @@ herbal_info = {
             "Siapkan 5-10 lembar daun Afrika dan 4 gelas air.",
             "Cuci bersih di bawah air mengalir.",
             "Rebus selama 10-15 menit hingga tersisa 2 gelas.",
-            "Minum pagi dan sore hari. Dapat ditambahkan sedikit perasan jeruk nipis."
+            "Minum pagi dan sore hari. Dapat ditambahkan sedikit perasan jeruk nipis untuk mengurangi rasa pahit."
         ],
+        "tautan_pengolahan": "https://www.liputan6.com/hot/read/5871678/cara-merebus-daun-afrika-untuk-jaga-gula-darah-dan-obat-demam-simak-panduan-lengkapnya",
+        "sumber_pengolahan": "Liputan 6 - Cara Merebus Daun Afrika untuk Jaga Gula Darah dan Obat Demam, Simak Panduan Lengkapnya",
         "catatan": "Minum secara teratur dalam dosis aman. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
     },
     "Ziziphus mauritiana": {
@@ -311,11 +328,15 @@ herbal_info = {
         "tautan_jurnal": "https://doi.org/10.3390/plants13162195",
         "judul_jurnal": "Ziziphus mauritiana Lam. Bark and Leaves: Extraction, Phytochemical Composition, In Vitro Bioassays and In Silico Studies",
         "cara_mengolah": [
-            "Siapkan 10 lembar daun bidara tua, 1/2 buah jeruk nipis, dan 600 ml air.",
+            "Siapkan 5 hingga 7 lembar daun bidara segar yang tidak terlalu tua atau terlalu muda dan 400 ml air.",
             "Cuci bersih daun bidara.",
-            "Rebus air hingga mendidih, masukkan daun bidara dan masak 20 menit dengan api kecil.",
-            "Tambahkan perasan jeruk nipis dan nikmati selagi hangat."
+            "Rebus air hingga mendidih selama 10 sampai 15 menit.",
+            "Saring air rebusan menggunakan saringan halus untuk memisahkan ampas daun. Buang ampasnya dan simpan air rebusan.",
+            "Opsional: tambahkan pemanis alami seperti madu.",
+            "Konsumsi air rebusan daun bidara selagi hangat. Rebusan ini sebaiknya diminum sesegera mungkin setelah dibuat untuk menjaga kesegaran dan potensi khasiatnya"
         ],
+        "tautan_pengolahan": "https://www.halodoc.com/artikel/aturan-minum-rebusan-daun-bidara-jangan-salah-minum?srsltid=AU7gw4WFF4l3w3Yn0wXr828L34RAMr6tzIYhzgx2fNIpRY0lnhUPAZqu",
+        "sumber_pengolahan": "Halodoc - Aturan Minum Rebusan Daun Bidara: Jangan Salah Minum!",
         "catatan": "Minum secara teratur dalam dosis aman. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
     }
 }
