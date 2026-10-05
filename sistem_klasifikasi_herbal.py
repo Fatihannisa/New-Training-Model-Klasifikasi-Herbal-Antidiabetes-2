@@ -884,7 +884,7 @@ elif st.session_state.page == "result":
         st.warning(catatan_text)
 
     # Tombol Ganti Gambar (Lebar disamakan dengan kolom view daun / colA)
-    if st.button("🔄 Ganti Gambar", use_container_width=True, type="primary"):
+    if st.button("🔄 Ganti Gambar", use_container_width=True, type="primary", margin-top=30px):
         st.session_state.page = "upload"
         st.rerun()
             
