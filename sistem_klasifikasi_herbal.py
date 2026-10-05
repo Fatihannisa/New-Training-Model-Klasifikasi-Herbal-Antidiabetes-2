@@ -885,10 +885,10 @@ elif st.session_state.page == "result":
         catatan_text = data["catatan"].replace("<strong>", "**").replace("</strong>", "**")
         st.warning(catatan_text)
 
-# Tombol Ganti Gambar (Lebar disamakan dengan kolom view daun / colA)
-if st.button("🔄 Ganti Gambar", use_container_width=True, type="primary"):
-    st.session_state.page = "upload"
-    st.rerun()
+    # Tombol Ganti Gambar (Lebar disamakan dengan kolom view daun / colA)
+    if st.button("🔄 Ganti Gambar", use_container_width=True, type="primary"):
+        st.session_state.page = "upload"
+        st.rerun()
             
 # =========================================================
 # DISCLAIMER NOTICE & FOOTER
