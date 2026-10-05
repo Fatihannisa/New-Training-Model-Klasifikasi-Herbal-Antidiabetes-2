@@ -248,6 +248,8 @@ herbal_info = {
             "Rebus dengan api sedang (hindari panci aluminium) hingga menyusut jadi 1 gelas.",
             "Saring dan minum 1-2 kali sehari."
         ],
+        "tautan_pengolahan": "https://hellosehat.com/herbal-alternatif/herbal/daun-ciplukan/", # <-- Tambahkan URL di sini
+        "sumber_pengolahan": "Hello Sehat - Panduan Pengolahan Daun Ciplukan", 
         "catatan": "Disarankan merebus dengan wadah stainless steel atau enamel. Konsumsi dalam jumlah wajar. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
     },
     "Rosa sp": {
@@ -874,6 +876,18 @@ elif st.session_state.page == "result":
     if data and data["cara_mengolah"]:
         for idx, langkah in enumerate(data["cara_mengolah"], 1):
             st.markdown(f"**{idx}.** {langkah}")
+            
+        # Bagian Tautan Referensi Pengolahan
+        if data.get("tautan_pengolahan"):
+            nama_sumber = data.get("sumber_pengolahan", "Baca referensi cara pengolahan selengkapnya")
+            st.markdown(f"""
+                <div style="margin-top: 14px; font-size: 15px; color: #475569;">
+                    <span style="font-weight: 600;">📖 Sumber Referensi Pengolahan:</span> 
+                    <a href="{data['tautan_pengolahan']}" target="_blank" style="text-decoration: none; color: #0066CC; font-weight: 500;">
+                        {nama_sumber} ↗
+                    </a>
+                </div>
+            """, unsafe_allow_html=True)
     else:
         st.write("*(Tanaman ini merupakan tanaman pembanding dan tidak memiliki tata cara pengolahan ramuan antidiabetes).*")
 
