@@ -820,8 +820,6 @@ elif st.session_state.page == "result":
         )
 
     # INFORMASI DETAIL HERBAL
-    st.markdown(unsafe_allow_html=True)
-
     st.markdown("<div class='section-header'>🌿 Informasi Herbal</div>", unsafe_allow_html=True)
     st.write(data["informasi"] if data else "Tidak ada informasi khusus.")
 
