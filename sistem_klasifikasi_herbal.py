@@ -777,11 +777,6 @@ elif st.session_state.page == "result":
                 </div>
             """, unsafe_allow_html=True)
 
-        # Tombol Ganti Gambar (Lebar disamakan dengan kolom view daun / colA)
-        if st.button("🔄 Ganti Gambar", use_container_width=True, type="primary"):
-            st.session_state.page = "upload"
-            st.rerun()
-
     with colB:
         status_class = "badge-antidiabetes" if is_antidiabetic else "badge-pembanding"
         status_text = data["status"] if data else "Tanaman Pembanding"
@@ -825,7 +820,7 @@ elif st.session_state.page == "result":
         )
 
     # INFORMASI DETAIL HERBAL
-    st.markdown("<hr>", unsafe_allow_html=True)
+    st.markdown( unsafe_allow_html=True)
 
     st.markdown("<div class='section-header'>🌿 Informasi Herbal</div>", unsafe_allow_html=True)
     st.write(data["informasi"] if data else "Tidak ada informasi khusus.")
@@ -890,6 +885,11 @@ elif st.session_state.page == "result":
         catatan_text = data["catatan"].replace("<strong>", "**").replace("</strong>", "**")
         st.warning(catatan_text)
 
+# Tombol Ganti Gambar (Lebar disamakan dengan kolom view daun / colA)
+if st.button("🔄 Ganti Gambar", use_container_width=True, type="primary"):
+    st.session_state.page = "upload"
+    st.rerun()
+            
 # =========================================================
 # DISCLAIMER NOTICE & FOOTER
 # =========================================================
