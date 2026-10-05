@@ -308,7 +308,7 @@ herbal_info = {
         "tautan_artikel": "https://hellosehat.com/herbal-alternatif/herbal/manfaat-daun-afrika/",
         "judul_artikel": "7 Manfaat Daun Afrika bagi Kesehatan Tubuh, Jangan Lewatkan!",
         "tautan_jurnal": "https://www.neliti.com/id/publications/460123/potensi-daun-afrika-vernonia-amygdalina-sebagai-antidiabetik",
-        "judul_jurnal": "Putri, Yunisa A. "Potensi Daun Afrika ( Vernonia Amygdalina ) sebagai Antidiabetik." Jurnal Ilmiah Kesehatan Sandi Husada, vol. 8, no. 2, 2019, pp. 336-339, doi:10.35816/jiskh.v10i2.183.",
+        "judul_jurnal": "Putri, Yunisa A. 'Potensi Daun Afrika ( Vernonia Amygdalina ) sebagai Antidiabetik.' Jurnal Ilmiah Kesehatan Sandi Husada, vol. 8, no. 2, 2019, pp. 336-339, doi:10.35816/jiskh.v10i2.183.",
         "cara_mengolah": [
             "Siapkan 5-10 lembar daun Afrika dan 4 gelas air.",
             "Cuci bersih di bawah air mengalir.",
