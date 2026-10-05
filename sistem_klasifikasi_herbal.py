@@ -749,11 +749,11 @@ elif st.session_state.page == "result":
     colA, colB = st.columns([1, 1])
 
     # KANAN & KIRI ATAS
-        with colA:
-        # Convert PIL Image to Base64 to render cleanly inside single HTML block
-        buffered = io.BytesIO()
-        img_input.save(buffered, format="PNG")
-        img_b64 = base64.b64encode(buffered.getvalue()).decode()
+    with colA:
+    # Convert PIL Image to Base64 to render cleanly inside single HTML block
+    buffered = io.BytesIO()
+    img_input.save(buffered, format="PNG")
+    img_b64 = base64.b64encode(buffered.getvalue()).decode()
 
         st.markdown(f"""
         <div class="custom-card" style="text-align: center; padding: 24px;">
