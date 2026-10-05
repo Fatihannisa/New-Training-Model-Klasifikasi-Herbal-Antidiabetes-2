@@ -307,7 +307,7 @@ herbal_info = {
         "tautan_artikel": "https://hellosehat.com/herbal-alternatif/herbal/daun-bidara/",
         "judul_artikel": "Daun Bidara: Kandungan, Manfaat, Efek Samping, dll.",
         "tautan_jurnal": "https://doi.org/10.3390/plants13162195",
-        "judul_jurnal": "Ziziphus mauritiana Lam. Bark and Leaves: Extraction, Phytochemical Composition, In Vitro Bioassays and In Silico Studies",
+        "judul_jurnal": "Nilofar, Sinan, K. I., Dall’Acqua, S., Sut, S., Uba, A. I., Etienne, O. K., Ferrante, C., Ahmad, J., & Zengin, G. (2024). Ziziphus mauritiana Lam. Bark and Leaves: Extraction, Phytochemical Composition, In Vitro Bioassays and In Silico Studies. Plants, 13(16), 2195. https://doi.org/10.3390/plants13162195",
         "cara_mengolah": [
             "Siapkan 10 lembar daun bidara tua, 1/2 buah jeruk nipis, dan 600 ml air.",
             "Cuci bersih daun bidara.",
