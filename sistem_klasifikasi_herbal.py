@@ -189,7 +189,7 @@ herbal_info = {
             "Kunci utama mengolah daun kelor adalah menghindari paparan suhu tinggi dalam waktu yang lama. Pemanasan berlebih dapat menghancurkan vitamin C dan senyawa antioksidan sensitif seperti quercetin dan asam klorogenat."
         ],
         "tautan_pengolahan": "https://www.halodoc.com/artikel/ini-cara-mengolah-daun-kelor-agar-manfaatnya-maksimal?srsltid=AU7gw4VTzmXCONXyFP9MVyjgNw3h2hMtKAKY8oY1IKRvwfGmYRp0qytS",
-        "sumber_pengolahan": "Halodoc - Ini Cara Mengolah Daun Kelor agar Manfaatnya Maksimal"
+        "sumber_pengolahan": "Halodoc - Ini Cara Mengolah Daun Kelor agar Manfaatnya Maksimal",
         "catatan": "Konsumsi dalam jumlah wajar. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
     },
     "Orthosiphon aristatus": {
