@@ -777,11 +777,6 @@ elif st.session_state.page == "result":
                 </div>
             """, unsafe_allow_html=True)
 
-        # Tombol Ganti Gambar (Lebar disamakan dengan kolom view daun / colA)
-        if st.button("🔄 Ganti Gambar", use_container_width=True, type="primary"):
-            st.session_state.page = "upload"
-            st.rerun()
-
     with colB:
         status_class = "badge-antidiabetes" if is_antidiabetic else "badge-pembanding"
         status_text = data["status"] if data else "Tanaman Pembanding"
@@ -889,6 +884,11 @@ elif st.session_state.page == "result":
         st.markdown("<div class='section-header'>⚠️ Catatan Penting</div>", unsafe_allow_html=True)
         catatan_text = data["catatan"].replace("<strong>", "**").replace("</strong>", "**")
         st.warning(catatan_text)
+
+    # Tombol Ganti Gambar (Lebar disamakan dengan kolom view daun / colA)
+        if st.button("🔄 Ganti Gambar", use_container_width=True, type="primary"):
+            st.session_state.page = "upload"
+            st.rerun()
 
 # =========================================================
 # DISCLAIMER NOTICE & FOOTER
