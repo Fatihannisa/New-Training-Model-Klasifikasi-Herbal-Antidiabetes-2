@@ -80,7 +80,9 @@ herbal_info = {
         "status": "Tanaman herbal antidiabetes",
         "informasi": "Sambiloto terkenal sebagai herbal dengan kandungan andrographolide (AGL) yang sangat pahit, tetapi berkhasiat tinggi dalam mengendalikan kadar gula darah dan bersifat antiinflamasi. AGL mampu meningkatkan produksi insulin dan penyerapan glukosa sehingga mengurangi kadar gula dalam darah.",
         "tautan_artikel": "https://hellosehat.com/diabetes/daun-sambiloto-untuk-diabetes/",
+        "judul_artikel": "Kenali Manfaat Daun Sambiloto untuk Diabetes, Plus Efek Sampingnya",
         "tautan_jurnal": "https://jurnal.ikbis.ac.id/index.php/infokes/article/view/371/221",
+        "judul_jurnal": "AIR REBUSAN DAUN SAMBILOTO (ANDROGRAPHIS PANICULATA) TERHADAP PENURUNAN KADAR GULA DARAH PADA PENDERITA DIABETES MELIITUS",
         "cara_mengolah": [
             "Siapkan 25 lembar daun sambiloto segar dan 110 ml air bersih.",
             "Cuci bersih daun sambiloto di bawah air mengalir.",
@@ -112,14 +114,16 @@ herbal_info = {
         "status": "Tanaman herbal antidiabetes",
         "informasi": "Ekstrak daun tapak dara dipercaya dapat merangsang sekresi insulin dalam sel beta pankreas dan meningkatkan penggunaan glukosa di jaringan perifer, membantu menjaga kestabilan gula darah.",
         "tautan_artikel": "https://hellosehat.com/herbal-alternatif/herbal/manfaat-daun-tapak-dara/",
+        "judul_artikel": "7 Manfaat Daun Tapak Dara, Menghambat Kanker hingga Atasi Diabetes",
         "tautan_jurnal": "https://jurnal.unpad.ac.id/farmaka/article/view/47508/pdf",
+        "judul_jurnal": "STUDI IN SILICO SENYAWA - SENYAWA DALAM BUNGA TAPAK DARA (Catharanthus roseus) SEBAGAI ANTIDIABETES MELALUI PENGHAMBATAN ENZIM ALDOSE REDUCTASE",
         "cara_mengolah": [
             "Siapkan 5-10 lembar daun tapak dara yang masih segar dan 2 gelas air.",
             "Cuci bersih daun tapak dara di bawah air mengalir.",
             "Rebus daun dengan api kecil sampai air berubah warna.",
             "Saring dan biarkan hingga hangat sebelum diminum."
         ],
-        "catatan": "Disarankan mengonsumsi satu gelas sehari. Konsultasikan dengan dokter untuk rencana pengobatan yang aman."
+        "catatan": "Disarankan mengonsumsi satu gelas sehari. Jika memiliki kondisi medis tertentu, konsultasikan terlebih dahulu dengan dokter."
     },
     "Dracaena angustifolia": {
         "nama_umum": ["Suji", "Suji hijau", "Semar"],
@@ -171,72 +175,82 @@ herbal_info = {
         "status": "Tanaman herbal antidiabetes",
         "informasi": "Daun kelor memiliki efek hipoglikemik yang membantu menurunkan kadar gula darah dengan meningkatkan sensitivitas insulin dan mengurangi penyerapan glukosa di usus.",
         "tautan_artikel": "https://hellosehat.com/diabetes/tipe-2/manfaat-daun-kelor-untuk-diabetes/",
+        "judul_artikel": "Mengulik Khasiat Daun Kelor sebagai Obat Diabetes Alami, Benarkah Bermanfaat?",
         "tautan_jurnal": "https://doi.org/10.35617/jfionline.v12i1.21",
+        "judul_jurnal": "Potensi Daun Kelor (Moringa oleifera) sebagai Agen Anti-Hipergikemia: Studi Literatur",
         "cara_mengolah": [
             "Siapkan segenggam daun kelor (10-15 gram) dan 600 ml air.",
             "Cuci bersih daun kelor di bawah air mengalir.",
             "Panaskan air hingga mendidih, lalu masukkan daun kelor dan rebus 5-15 menit.",
             "Saring air rebusan untuk diminum. Daun rebusan tetap bisa dikonsumsi sebagai lalapan."
         ],
-        "catatan": "Mengonsumsi dalam jumlah wajar. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
+        "catatan": "Konsumsi dalam jumlah wajar. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
     },
     "Orthosiphon aristatus": {
         "nama_umum": ["Kumis kucing", "Remujung"],
         "status": "Tanaman herbal antidiabetes",
         "informasi": "Daun kumis kucing kaya flavonoid dan saponin. Flavonoid menghambat pemecahan karbohidrat di usus, sedangkan saponin merangsang pelepasan insulin.",
         "tautan_artikel": "https://hellosehat.com/herbal-alternatif/herbal/tanaman-kumis-kucing/",
+        "judul_artikel": "7 Manfaat Tanaman Kumis Kucing untuk Kesehatan",
         "tautan_jurnal": "https://doi.org/10.36990/hijp.v7i1.533",
+        "judul_jurnal": "Pengaruh Pemberian Ekstrak Daun Kumis Kucing (Orthosiphon Aristatus) Terhadap Perubahan Kadar Glukos Darah Pada Pasien Diabetes Mellitus Di Ruang Rawat Jalan Rumah Sakit Umum Bahteramas Provinsi Sulawesi Tenggara",
         "cara_mengolah": [
             "Siapkan segenggam daun kumis kucing (10-15 gram) dan 500 ml air.",
             "Cuci bersih di bawah air mengalir.",
             "Rebus selama 15-20 menit.",
             "Saring air rebusan dan minum 2-3 kali sehari."
         ],
-        "catatan": "Gunakan dalam jumlah wajar dan konsultasikan ke dokter untuk pemakaian jangka panjang."
+        "catatan": "Konsumsi dalam jumlah wajar. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
     },
     "Pandanus amaryllifolius": {
         "nama_umum": ["Pandan wangi", "Pandan"],
         "status": "Tanaman herbal antidiabetes",
         "informasi": "Daun pandan mengandung flavonoid, tanin, dan polifenol yang mampu merangsang produksi hormon insulin dari sel beta pankreas.",
         "tautan_artikel": "https://share.google/BTrQ3MBtqbTndrJvO",
+        "judul_artikel": "Manfaat Daun Pandan dan Efek Sampingnya Bagi Tubuh",
         "tautan_jurnal": "https://ejurnalmalahayati.ac.id/index.php/kebidanan/article/view/3024/pdf",
+        "judul_jurnal": "PEMBERIAN AIR DAUN PANDAN TERHADAP PENURUNAN KADAR GULA DARAHPADA PASIEN DIABETES ",
         "cara_mengolah": [
             "Siapkan 3-4 lembar daun pandan segar/kering dan 500 ml air.",
             "Cuci bersih dan potong menjadi beberapa bagian.",
             "Rebus dalam air mendidih selama 10-15 menit hingga air berwarna hijau kekuningan.",
             "Saring air rebusan dan minum hangat."
         ],
-        "catatan": "Hindari menambahkan gula pasir tinggi kalori; gunakan pemanis alami jika diperlukan."
+        "catatan": "Hindari menambahkan gula pasir tinggi kalori; gunakan pemanis alami jika diperlukan. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
     },
     "Phyllanthus amarus": {
         "nama_umum": ["Meniran"],
         "status": "Tanaman herbal antidiabetes",
         "informasi": "Meniran memiliki senyawa aktif yang memengaruhi metabolisme glukosa dan mendukung pengelolaan tingkat kadar gula darah secara berkelanjutan.",
         "tautan_artikel": "https://www.halodoc.com/artikel/manfaat-pohon-meniran-jaga-imun-ginjal-sehat-alami",
+        "judul_artikel": "Manfaat Pohon Meniran: Jaga Imun, Ginjal Sehat Alami",
         "tautan_jurnal": "https://doi.org/10.36656/jpfh.v2i1.79",
+        "judul_jurnal": "UJI EFEKTIVITAS ANTIDIABETES KOMBINASI EKSTRAK DAUN MENIRAN (Phyllanthus niruri L.) Dan KELOPAK BUNGA ROSELLA (Hibiscus sabdariffa L.) PADA TIKUS JANTAN PUTIH",
         "cara_mengolah": [
             "Siapkan segenggam daun meniran segar (10-15 gram) dan 3 gelas air.",
             "Cuci bersih di bawah air mengalir.",
             "Rebus hingga air menyusut sekitar 1 gelas.",
             "Saring dan konsumsi selagi hangat 1-2 kali sehari."
         ],
-        "catatan": "Konsultasikan dengan dokter jika sedang mengonsumsi obat-obatan medis rutin."
+        "catatan": "Konsumsi dalam jumlah wajar. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
     },
     "Physalis angulata": {
         "nama_umum": ["Ciplukan", "Ceplukan", "Cecendet"],
         "status": "Tanaman herbal antidiabetes",
         "informasi": "Daun Ciplukan memiliki indeks glikemik rendah dan dapat meningkatkan sensitivitas atau produksi insulin dalam tubuh.",
         "tautan_artikel": "https://www.halodoc.com/artikel/pohon-ciplukan-dan-khasiatnya-dari-diabetes-hingga-kanker",
+        "judul_artikel": "Pohon Ciplukan dan Khasiatnya: Dari Diabetes Hingga Kanker",
         "tautan_jurnal": "https://journal.ukmc.ac.id/index.php/joh/article/view/1141/1081",
+        "judul_jurnal": "Uji Aktivitas Antidiabetes Kombinasi Ekstrak Etanol Daun Ciplukan (Physalis AngulataL.) dan MaduHutanTerhadap Mencit Putih Jantan yang Diinduksi Streptozotocin",
         "cara_mengolah": [
             "Siapkan 10-15 gram daun ciplukan segar dan 3 gelas air (600 ml).",
             "Cuci bersih daun di bawah air mengalir.",
             "Rebus dengan api sedang (hindari panci aluminium) hingga menyusut jadi 1 gelas.",
             "Saring dan minum 1-2 kali sehari."
         ],
-        "catatan": "Disarankan merebus dengan wadah stainless steel atau enamel."
+        "catatan": "Disarankan merebus dengan wadah stainless steel atau enamel. Konsumsi dalam jumlah wajar. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
     },
-    "Rosa sp.": {
+    "Rosa sp": {
         "nama_umum": ["Mawar"],
         "status": "Tanaman pembanding",
         "informasi": "Mawar adalah tumbuhan perdu berkayu dan berduri yang terkenal sebagai tanaman hias populer.",
@@ -259,28 +273,32 @@ herbal_info = {
         "status": "Tanaman herbal antidiabetes",
         "informasi": "Daun salam mengandung flavonoid, tanin, dan polifenol yang meningkatkan kerja insulin serta menghambat penyerapan gula di usus.",
         "tautan_artikel": "https://www.halodoc.com/artikel/daun-salam-khasiat-dan-cara-konsumsi-sehat",
+        "judul_artikel": "Daun Salam: Khasiat dan Cara Konsumsi Sehat",
         "tautan_jurnal": "https://doi.org/10.3164/jcbn.08-188",
+        "judul_jurnal": "Bay Leaves Improve Glucose and Lipid Profile of People with Type 2 Diabetes",
         "cara_mengolah": [
             "Siapkan 10-15 lembar daun salam segar dan 600 ml air (3 gelas).",
             "Cuci bersih daun salam.",
             "Rebus dengan api sedang sampai menyusut menjadi 1 gelas (200 ml).",
             "Saring dan minum hangat 2 kali sehari sebelum makan."
         ],
-        "catatan": "Gunakan wadah perebus yang tidak reaktif terhadap logam."
+        "catatan": "Gunakan wadah perebus yang tidak reaktif terhadap logam dan konsumsi dalam jumlah wajar. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
     },
     "Vernonia amygdalina": {
         "nama_umum": ["Daun Afrika", "Daun pahit", "Daun insulin"],
         "status": "Tanaman herbal antidiabetes",
         "informasi": "Ekstrak daun Afrika mengandung saponin, tanin, flavonoid, dan alkaloid yang terbukti efektif menekan lonjakan glukosa darah pasca makan.",
         "tautan_artikel": "https://hellosehat.com/herbal-alternatif/herbal/manfaat-daun-afrika/",
+        "judul_artikel": "7 Manfaat Daun Afrika bagi Kesehatan Tubuh, Jangan Lewatkan!",
         "tautan_jurnal": "https://www.neliti.com/id/publications/460123/potensi-daun-afrika-vernonia-amygdalina-sebagai-antidiabetik",
+        "judul_jurnal": "Potensi Daun Afrika ( Vernonia Amygdalina ) sebagai Antidiabetik",
         "cara_mengolah": [
             "Siapkan 5-10 lembar daun Afrika dan 4 gelas air.",
             "Cuci bersih di bawah air mengalir.",
             "Rebus selama 10-15 menit hingga tersisa 2 gelas.",
             "Minum pagi dan sore hari. Dapat ditambahkan sedikit perasan jeruk nipis."
         ],
-        "catatan": "Minum secara teratur dalam dosis aman."
+        "catatan": "Minum secara teratur dalam dosis aman. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
     },
     "Ziziphus mauritiana": {
         "nama_umum": ["Bidara", "Widara", "Bukol"],
@@ -296,7 +314,7 @@ herbal_info = {
             "Rebus air hingga mendidih, masukkan daun bidara dan masak 20 menit dengan api kecil.",
             "Tambahkan perasan jeruk nipis dan nikmati selagi hangat."
         ],
-        "catatan": "Gunakan dalam jumlah wajar dan konsultasikan ke dokter untuk pemakaian jangka panjang."
+        "catatan": "Minum secara teratur dalam dosis aman. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
     }
 }
 
@@ -345,6 +363,13 @@ def get_leaf_mask(img):
     _, clean_mask = cv2.threshold(clean_mask, 127, 255, cv2.THRESH_BINARY)
     return clean_mask
 
+def resize_input_image(img, size=(512, 512)):
+    return cv2.resize(
+        img,
+        size,
+        interpolation=cv2.INTER_AREA
+    )
+    
 def preprocess_camera_leaf(img):
     try:
         _, buffer = cv2.imencode(".png", img)
@@ -439,6 +464,7 @@ def to_vein_input(img: np.ndarray) -> np.ndarray:
 def predict(image):
     img = np.array(image.convert("RGB"))
     img_bgr = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+    img_bgr = resize_input_image(img_bgr, (512, 512))
     processed = preprocess_camera_leaf(img_bgr)
     rgb_input = np.expand_dims(to_rgb_input(processed), 0).astype(np.float32)
     vein_input = np.expand_dims(to_vein_input(processed), 0).astype(np.float32)
@@ -610,14 +636,14 @@ div[data-testid="stFileUploader"] button {
 # =========================================================
 # HEADER COMPONENT
 # =========================================================
-logo_b64 = load_base64("images/diaherb_logo.png")
+logo_b64 = load_base64("images/logo.png")
 
 if logo_b64:
     st.markdown(f"""
-        <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 0; border-bottom:1px solid #e2e8f0; margin-bottom:30px;">
-            <img src="data:image/png;base64,{logo_b64}" style="height:70px; width:auto;">
+        <div style="display:flex; align-items:center; justify-content:space-between; padding:5px 0; border-bottom:1px solid #e2e8f0; margin-bottom:30px;">
+            <img src="data:image/png;base64,{logo_b64}" style="height:120px; width:auto;">
             <span style="font-size:13px; font-weight:600; color:#047857; background:#ecfdf5; padding:6px 14px; border-radius:10px; border:1px solid #a7f3d0;">
-                LeafNet Dual-Branch Model • Tugas Akhir 211401034
+                LeafNet Dual-Branch Model • Tugas Akhir (211401034)
             </span>
         </div>
     """, unsafe_allow_html=True)
