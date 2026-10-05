@@ -80,9 +80,7 @@ herbal_info = {
         "status": "Tanaman herbal antidiabetes",
         "informasi": "Sambiloto terkenal sebagai herbal dengan kandungan andrographolide (AGL) yang sangat pahit, tetapi berkhasiat tinggi dalam mengendalikan kadar gula darah dan bersifat antiinflamasi. AGL mampu meningkatkan produksi insulin dan penyerapan glukosa sehingga mengurangi kadar gula dalam darah.",
         "tautan_artikel": "https://hellosehat.com/diabetes/daun-sambiloto-untuk-diabetes/",
-        "judul_artikel": "Kenali Manfaat Daun Sambiloto untuk Diabetes, Plus Efek Sampingnya",
         "tautan_jurnal": "https://jurnal.ikbis.ac.id/index.php/infokes/article/view/371/221",
-        "judul_jurnal": "AIR REBUSAN DAUN SAMBILOTO (ANDROGRAPHIS PANICULATA) TERHADAP PENURUNAN KADAR GULA DARAH PADA PENDERITA DIABETES MELIITUS",
         "cara_mengolah": [
             "Siapkan 25 lembar daun sambiloto segar dan 110 ml air bersih.",
             "Cuci bersih daun sambiloto di bawah air mengalir.",
@@ -114,16 +112,14 @@ herbal_info = {
         "status": "Tanaman herbal antidiabetes",
         "informasi": "Ekstrak daun tapak dara dipercaya dapat merangsang sekresi insulin dalam sel beta pankreas dan meningkatkan penggunaan glukosa di jaringan perifer, membantu menjaga kestabilan gula darah.",
         "tautan_artikel": "https://hellosehat.com/herbal-alternatif/herbal/manfaat-daun-tapak-dara/",
-        "judul_artikel": "7 Manfaat Daun Tapak Dara, Menghambat Kanker hingga Atasi Diabetes",
         "tautan_jurnal": "https://jurnal.unpad.ac.id/farmaka/article/view/47508/pdf",
-        "judul_jurnal": "STUDI IN SILICO SENYAWA - SENYAWA DALAM BUNGA TAPAK DARA (Catharanthus roseus) SEBAGAI ANTIDIABETES MELALUI PENGHAMBATAN ENZIM ALDOSE REDUCTASE",
         "cara_mengolah": [
             "Siapkan 5-10 lembar daun tapak dara yang masih segar dan 2 gelas air.",
             "Cuci bersih daun tapak dara di bawah air mengalir.",
             "Rebus daun dengan api kecil sampai air berubah warna.",
             "Saring dan biarkan hingga hangat sebelum diminum."
         ],
-        "catatan": "Disarankan mengonsumsi satu gelas sehari. Jika memiliki kondisi medis tertentu, konsultasikan terlebih dahulu dengan dokter."
+        "catatan": "Disarankan mengonsumsi satu gelas sehari. Konsultasikan dengan dokter untuk rencana pengobatan yang aman."
     },
     "Dracaena angustifolia": {
         "nama_umum": ["Suji", "Suji hijau", "Semar"],
@@ -175,82 +171,72 @@ herbal_info = {
         "status": "Tanaman herbal antidiabetes",
         "informasi": "Daun kelor memiliki efek hipoglikemik yang membantu menurunkan kadar gula darah dengan meningkatkan sensitivitas insulin dan mengurangi penyerapan glukosa di usus.",
         "tautan_artikel": "https://hellosehat.com/diabetes/tipe-2/manfaat-daun-kelor-untuk-diabetes/",
-        "judul_artikel": "Mengulik Khasiat Daun Kelor sebagai Obat Diabetes Alami, Benarkah Bermanfaat?",
         "tautan_jurnal": "https://doi.org/10.35617/jfionline.v12i1.21",
-        "judul_jurnal": "Potensi Daun Kelor (Moringa oleifera) sebagai Agen Anti-Hipergikemia: Studi Literatur",
         "cara_mengolah": [
             "Siapkan segenggam daun kelor (10-15 gram) dan 600 ml air.",
             "Cuci bersih daun kelor di bawah air mengalir.",
             "Panaskan air hingga mendidih, lalu masukkan daun kelor dan rebus 5-15 menit.",
             "Saring air rebusan untuk diminum. Daun rebusan tetap bisa dikonsumsi sebagai lalapan."
         ],
-        "catatan": "Konsumsi dalam jumlah wajar. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
+        "catatan": "Mengonsumsi dalam jumlah wajar. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
     },
     "Orthosiphon aristatus": {
         "nama_umum": ["Kumis kucing", "Remujung"],
         "status": "Tanaman herbal antidiabetes",
         "informasi": "Daun kumis kucing kaya flavonoid dan saponin. Flavonoid menghambat pemecahan karbohidrat di usus, sedangkan saponin merangsang pelepasan insulin.",
         "tautan_artikel": "https://hellosehat.com/herbal-alternatif/herbal/tanaman-kumis-kucing/",
-        "judul_artikel": "7 Manfaat Tanaman Kumis Kucing untuk Kesehatan",
         "tautan_jurnal": "https://doi.org/10.36990/hijp.v7i1.533",
-        "judul_jurnal": "Pengaruh Pemberian Ekstrak Daun Kumis Kucing (Orthosiphon Aristatus) Terhadap Perubahan Kadar Glukos Darah Pada Pasien Diabetes Mellitus Di Ruang Rawat Jalan Rumah Sakit Umum Bahteramas Provinsi Sulawesi Tenggara",
         "cara_mengolah": [
             "Siapkan segenggam daun kumis kucing (10-15 gram) dan 500 ml air.",
             "Cuci bersih di bawah air mengalir.",
             "Rebus selama 15-20 menit.",
             "Saring air rebusan dan minum 2-3 kali sehari."
         ],
-        "catatan": "Konsumsi dalam jumlah wajar. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
+        "catatan": "Gunakan dalam jumlah wajar dan konsultasikan ke dokter untuk pemakaian jangka panjang."
     },
     "Pandanus amaryllifolius": {
         "nama_umum": ["Pandan wangi", "Pandan"],
         "status": "Tanaman herbal antidiabetes",
         "informasi": "Daun pandan mengandung flavonoid, tanin, dan polifenol yang mampu merangsang produksi hormon insulin dari sel beta pankreas.",
         "tautan_artikel": "https://share.google/BTrQ3MBtqbTndrJvO",
-        "judul_artikel": "Manfaat Daun Pandan dan Efek Sampingnya Bagi Tubuh",
         "tautan_jurnal": "https://ejurnalmalahayati.ac.id/index.php/kebidanan/article/view/3024/pdf",
-        "judul_jurnal": "PEMBERIAN AIR DAUN PANDAN TERHADAP PENURUNAN KADAR GULA DARAHPADA PASIEN DIABETES ",
         "cara_mengolah": [
             "Siapkan 3-4 lembar daun pandan segar/kering dan 500 ml air.",
             "Cuci bersih dan potong menjadi beberapa bagian.",
             "Rebus dalam air mendidih selama 10-15 menit hingga air berwarna hijau kekuningan.",
             "Saring air rebusan dan minum hangat."
         ],
-        "catatan": "Hindari menambahkan gula pasir tinggi kalori; gunakan pemanis alami jika diperlukan. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
+        "catatan": "Hindari menambahkan gula pasir tinggi kalori; gunakan pemanis alami jika diperlukan."
     },
     "Phyllanthus amarus": {
         "nama_umum": ["Meniran"],
         "status": "Tanaman herbal antidiabetes",
         "informasi": "Meniran memiliki senyawa aktif yang memengaruhi metabolisme glukosa dan mendukung pengelolaan tingkat kadar gula darah secara berkelanjutan.",
         "tautan_artikel": "https://www.halodoc.com/artikel/manfaat-pohon-meniran-jaga-imun-ginjal-sehat-alami",
-        "judul_artikel": "Manfaat Pohon Meniran: Jaga Imun, Ginjal Sehat Alami",
         "tautan_jurnal": "https://doi.org/10.36656/jpfh.v2i1.79",
-        "judul_jurnal": "UJI EFEKTIVITAS ANTIDIABETES KOMBINASI EKSTRAK DAUN MENIRAN (Phyllanthus niruri L.) Dan KELOPAK BUNGA ROSELLA (Hibiscus sabdariffa L.) PADA TIKUS JANTAN PUTIH",
         "cara_mengolah": [
             "Siapkan segenggam daun meniran segar (10-15 gram) dan 3 gelas air.",
             "Cuci bersih di bawah air mengalir.",
             "Rebus hingga air menyusut sekitar 1 gelas.",
             "Saring dan konsumsi selagi hangat 1-2 kali sehari."
         ],
-        "catatan": "Konsumsi dalam jumlah wajar. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
+        "catatan": "Konsultasikan dengan dokter jika sedang mengonsumsi obat-obatan medis rutin."
     },
     "Physalis angulata": {
         "nama_umum": ["Ciplukan", "Ceplukan", "Cecendet"],
         "status": "Tanaman herbal antidiabetes",
         "informasi": "Daun Ciplukan memiliki indeks glikemik rendah dan dapat meningkatkan sensitivitas atau produksi insulin dalam tubuh.",
         "tautan_artikel": "https://www.halodoc.com/artikel/pohon-ciplukan-dan-khasiatnya-dari-diabetes-hingga-kanker",
-        "judul_artikel": "Pohon Ciplukan dan Khasiatnya: Dari Diabetes Hingga Kanker",
         "tautan_jurnal": "https://journal.ukmc.ac.id/index.php/joh/article/view/1141/1081",
-        "judul_jurnal": "Uji Aktivitas Antidiabetes Kombinasi Ekstrak Etanol Daun Ciplukan (Physalis AngulataL.) dan MaduHutanTerhadap Mencit Putih Jantan yang Diinduksi Streptozotocin",
         "cara_mengolah": [
             "Siapkan 10-15 gram daun ciplukan segar dan 3 gelas air (600 ml).",
             "Cuci bersih daun di bawah air mengalir.",
             "Rebus dengan api sedang (hindari panci aluminium) hingga menyusut jadi 1 gelas.",
             "Saring dan minum 1-2 kali sehari."
         ],
-        "catatan": "Disarankan merebus dengan wadah stainless steel atau enamel. Konsumsi dalam jumlah wajar. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
+        "catatan": "Disarankan merebus dengan wadah stainless steel atau enamel."
     },
-    "Rosa sp": {
+    "Rosa sp.": {
         "nama_umum": ["Mawar"],
         "status": "Tanaman pembanding",
         "informasi": "Mawar adalah tumbuhan perdu berkayu dan berduri yang terkenal sebagai tanaman hias populer.",
@@ -273,32 +259,28 @@ herbal_info = {
         "status": "Tanaman herbal antidiabetes",
         "informasi": "Daun salam mengandung flavonoid, tanin, dan polifenol yang meningkatkan kerja insulin serta menghambat penyerapan gula di usus.",
         "tautan_artikel": "https://www.halodoc.com/artikel/daun-salam-khasiat-dan-cara-konsumsi-sehat",
-        "judul_artikel": "Daun Salam: Khasiat dan Cara Konsumsi Sehat",
         "tautan_jurnal": "https://doi.org/10.3164/jcbn.08-188",
-        "judul_jurnal": "Bay Leaves Improve Glucose and Lipid Profile of People with Type 2 Diabetes",
         "cara_mengolah": [
             "Siapkan 10-15 lembar daun salam segar dan 600 ml air (3 gelas).",
             "Cuci bersih daun salam.",
             "Rebus dengan api sedang sampai menyusut menjadi 1 gelas (200 ml).",
             "Saring dan minum hangat 2 kali sehari sebelum makan."
         ],
-        "catatan": "Gunakan wadah perebus yang tidak reaktif terhadap logam dan konsumsi dalam jumlah wajar. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
+        "catatan": "Gunakan wadah perebus yang tidak reaktif terhadap logam."
     },
     "Vernonia amygdalina": {
         "nama_umum": ["Daun Afrika", "Daun pahit", "Daun insulin"],
         "status": "Tanaman herbal antidiabetes",
         "informasi": "Ekstrak daun Afrika mengandung saponin, tanin, flavonoid, dan alkaloid yang terbukti efektif menekan lonjakan glukosa darah pasca makan.",
         "tautan_artikel": "https://hellosehat.com/herbal-alternatif/herbal/manfaat-daun-afrika/",
-        "judul_artikel": "7 Manfaat Daun Afrika bagi Kesehatan Tubuh, Jangan Lewatkan!",
         "tautan_jurnal": "https://www.neliti.com/id/publications/460123/potensi-daun-afrika-vernonia-amygdalina-sebagai-antidiabetik",
-        "judul_jurnal": "Potensi Daun Afrika ( Vernonia Amygdalina ) sebagai Antidiabetik",
         "cara_mengolah": [
             "Siapkan 5-10 lembar daun Afrika dan 4 gelas air.",
             "Cuci bersih di bawah air mengalir.",
             "Rebus selama 10-15 menit hingga tersisa 2 gelas.",
             "Minum pagi dan sore hari. Dapat ditambahkan sedikit perasan jeruk nipis."
         ],
-        "catatan": "Minum secara teratur dalam dosis aman. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
+        "catatan": "Minum secara teratur dalam dosis aman."
     },
     "Ziziphus mauritiana": {
         "nama_umum": ["Bidara", "Widara", "Bukol"],
@@ -307,14 +289,14 @@ herbal_info = {
         "tautan_artikel": "https://hellosehat.com/herbal-alternatif/herbal/daun-bidara/",
         "judul_artikel": "Daun Bidara: Kandungan, Manfaat, Efek Samping, dll.",
         "tautan_jurnal": "https://doi.org/10.3390/plants13162195",
-        "judul_jurnal": "Nilofar, Sinan, K. I., Dall’Acqua, S., Sut, S., Uba, A. I., Etienne, O. K., Ferrante, C., Ahmad, J., & Zengin, G. (2024). Ziziphus mauritiana Lam. Bark and Leaves: Extraction, Phytochemical Composition, In Vitro Bioassays and In Silico Studies. Plants, 13(16), 2195. https://doi.org/10.3390/plants13162195",
+        "judul_jurnal": "Ziziphus mauritiana Lam. Bark and Leaves: Extraction, Phytochemical Composition, In Vitro Bioassays and In Silico Studies",
         "cara_mengolah": [
             "Siapkan 10 lembar daun bidara tua, 1/2 buah jeruk nipis, dan 600 ml air.",
             "Cuci bersih daun bidara.",
             "Rebus air hingga mendidih, masukkan daun bidara dan masak 20 menit dengan api kecil.",
             "Tambahkan perasan jeruk nipis dan nikmati selagi hangat."
         ],
-        "catatan": "Minum secara teratur dalam dosis aman. Jika memiliki kondisi medis tertentu, konsultasikan dengan dokter."
+        "catatan": "Gunakan dalam jumlah wajar dan konsultasikan ke dokter untuk pemakaian jangka panjang."
     }
 }
 
@@ -337,7 +319,7 @@ def _clahe_lab(img):
     l, a, b = cv2.split(lab)
     clahe = cv2.createCLAHE(clipLimit=CONFIG["CLAHE_CLIP"], tileGridSize=CONFIG["CLAHE_TILE"])
     l = clahe.apply(l)
-    return cv2.cvtColor( cv2.merge([l, a, b]), cv2.COLOR_LAB2BGR)
+    return cv2.cvtColor(cv2.merge([l, a, b]), cv2.COLOR_LAB2BGR)
 
 def _sharpen_veins(img):
     blurred = cv2.GaussianBlur(img, (0,0), sigmaX=3)
@@ -363,13 +345,6 @@ def get_leaf_mask(img):
     _, clean_mask = cv2.threshold(clean_mask, 127, 255, cv2.THRESH_BINARY)
     return clean_mask
 
-def resize_input_image(img, size=(512, 512)):
-    return cv2.resize(
-        img,
-        size,
-        interpolation=cv2.INTER_AREA
-    )
-    
 def preprocess_camera_leaf(img):
     try:
         _, buffer = cv2.imencode(".png", img)
@@ -411,60 +386,56 @@ def preprocess_camera_leaf(img):
         return cv2.resize(img, CONFIG["IMG_SIZE"])
 
 def to_rgb_input(img: np.ndarray) -> np.ndarray:
-  img = cv2.resize(img, CONFIG["IMG_SIZE"], interpolation=cv2.INTER_CUBIC)
-  if img.dtype != np.uint8:
-    img = np.clip(img * 255, 0, 255).astype(np.uint8)
-  mask = get_leaf_mask(img)
-  img[mask == 0] = 0
-  img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB).astype(np.float32)
-  mean = np.array([0.485, 0.456, 0.406]) * 255
-  std  = np.array([0.229, 0.224, 0.225]) * 255
-  img = (img - mean) / std
-  return img
+    img = cv2.resize(img, CONFIG["IMG_SIZE"], interpolation=cv2.INTER_CUBIC)
+    if img.dtype != np.uint8:
+        img = np.clip(img * 255, 0, 255).astype(np.uint8)
+    mask = get_leaf_mask(img)
+    img[mask == 0] = 0
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB).astype(np.float32)
+    mean = np.array([0.485, 0.456, 0.406]) * 255
+    std  = np.array([0.229, 0.224, 0.225]) * 255
+    img = (img - mean) / std
+    return img
 
 def to_vein_input(img: np.ndarray) -> np.ndarray:
-  EDGE_KERNEL_SIZE = (3, 3)
-  EDGE_WEIGHT = 0.50
-  img = cv2.resize(img, CONFIG["IMG_SIZE"], interpolation=cv2.INTER_CUBIC)
-  if img.dtype != np.uint8:
-      if img.max() <= 1.0:
-          img = img * 255.0
-      img = np.clip(img, 0, 255).astype(np.uint8)
-  mask = get_leaf_mask(img)
-  mask_binary = ( mask > 0).astype(np.uint8)
-  gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-  gray = cv2.bitwise_and(gray, gray, mask=mask)
-  gray = cv2.GaussianBlur(gray, (3, 3), 0)
-  clahe = cv2.createCLAHE(clipLimit=1.0, tileGridSize=(8, 8))
-  vein = clahe.apply(gray)
-  vein = cv2.bilateralFilter(vein, d=7, sigmaColor=50, sigmaSpace=50)
-  blur_large = cv2.GaussianBlur(vein, (21, 21), 0)
-  highpass = cv2.subtract(vein, (blur_large * 0.7).astype(np.uint8))
-  sobelx = cv2.Sobel(highpass, cv2.CV_32F, 1, 0, ksize=3)
-  sobely = cv2.Sobel(highpass, cv2.CV_32F, 0, 1, ksize=3)
-  sobel = cv2.magnitude(sobelx, sobely)
-  sobel = cv2.normalize(sobel, None, 0, 255, cv2.NORM_MINMAX).astype(np.uint8)
-  vein = cv2.addWeighted(highpass, 0.20, sobel, 0.80, 0)
-  vein = cv2.normalize(vein, None, 0, 255, cv2.NORM_MINMAX).astype(np.uint8)
-  _, vein = cv2.threshold(vein, 13, 255, cv2.THRESH_TOZERO)
-  edge_kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, EDGE_KERNEL_SIZE)
-  leaf_edge = cv2.morphologyEx(mask, cv2.MORPH_GRADIENT, edge_kernel)
-  leaf_edge = cv2.dilate(leaf_edge, edge_kernel, iterations=1)
-  leaf_edge_float = (leaf_edge.astype(np.float32) * EDGE_WEIGHT)
-  vein = np.maximum(vein.astype(np.float32), leaf_edge_float)
-  vein = np.clip(vein, 0, 255).astype(np.uint8)
-  vein[mask_binary == 0] = 0
-  vein = (vein.astype(np.float32) / 255.0)
-  vein = np.stack(
-      [vein, vein, vein],
-      axis=-1
-  )
-  return vein.astype(np.float32)
+    EDGE_KERNEL_SIZE = (3, 3)
+    EDGE_WEIGHT = 0.50
+    img = cv2.resize(img, CONFIG["IMG_SIZE"], interpolation=cv2.INTER_CUBIC)
+    if img.dtype != np.uint8:
+        if img.max() <= 1.0:
+            img = img * 255.0
+        img = np.clip(img, 0, 255).astype(np.uint8)
+    mask = get_leaf_mask(img)
+    mask_binary = (mask > 0).astype(np.uint8)
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    gray = cv2.bitwise_and(gray, gray, mask=mask)
+    gray = cv2.GaussianBlur(gray, (3, 3), 0)
+    clahe = cv2.createCLAHE(clipLimit=1.0, tileGridSize=(8, 8))
+    vein = clahe.apply(gray)
+    vein = cv2.bilateralFilter(vein, d=7, sigmaColor=50, sigmaSpace=50)
+    blur_large = cv2.GaussianBlur(vein, (21, 21), 0)
+    highpass = cv2.subtract(vein, (blur_large * 0.7).astype(np.uint8))
+    sobelx = cv2.Sobel(highpass, cv2.CV_32F, 1, 0, ksize=3)
+    sobely = cv2.Sobel(highpass, cv2.CV_32F, 0, 1, ksize=3)
+    sobel = cv2.magnitude(sobelx, sobely)
+    sobel = cv2.normalize(sobel, None, 0, 255, cv2.NORM_MINMAX).astype(np.uint8)
+    vein = cv2.addWeighted(highpass, 0.20, sobel, 0.80, 0)
+    vein = cv2.normalize(vein, None, 0, 255, cv2.NORM_MINMAX).astype(np.uint8)
+    _, vein = cv2.threshold(vein, 13, 255, cv2.THRESH_TOZERO)
+    edge_kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, EDGE_KERNEL_SIZE)
+    leaf_edge = cv2.morphologyEx(mask, cv2.MORPH_GRADIENT, edge_kernel)
+    leaf_edge = cv2.dilate(leaf_edge, edge_kernel, iterations=1)
+    leaf_edge_float = (leaf_edge.astype(np.float32) * EDGE_WEIGHT)
+    vein = np.maximum(vein.astype(np.float32), leaf_edge_float)
+    vein = np.clip(vein, 0, 255).astype(np.uint8)
+    vein[mask_binary == 0] = 0
+    vein = (vein.astype(np.float32) / 255.0)
+    vein = np.stack([vein, vein, vein], axis=-1)
+    return vein.astype(np.float32)
 
 def predict(image):
     img = np.array(image.convert("RGB"))
     img_bgr = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
-    img_bgr = resize_input_image(img_bgr, (512, 512))
     processed = preprocess_camera_leaf(img_bgr)
     rgb_input = np.expand_dims(to_rgb_input(processed), 0).astype(np.float32)
     vein_input = np.expand_dims(to_vein_input(processed), 0).astype(np.float32)
@@ -636,14 +607,14 @@ div[data-testid="stFileUploader"] button {
 # =========================================================
 # HEADER COMPONENT
 # =========================================================
-logo_b64 = load_base64("images/logo.png")
+logo_b64 = load_base64("images/diaherb_logo.png")
 
 if logo_b64:
     st.markdown(f"""
-        <div style="display:flex; align-items:center; justify-content:space-between; padding:5px 0; border-bottom:1px solid #e2e8f0; margin-bottom:30px;">
-            <img src="data:image/png;base64,{logo_b64}" style="height:120px; width:auto;">
+        <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 0; border-bottom:1px solid #e2e8f0; margin-bottom:30px;">
+            <img src="data:image/png;base64,{logo_b64}" style="height:70px; width:auto;">
             <span style="font-size:13px; font-weight:600; color:#047857; background:#ecfdf5; padding:6px 14px; border-radius:10px; border:1px solid #a7f3d0;">
-                LeafNet Dual-Branch Model • Tugas Akhir (211401034)
+                LeafNet Dual-Branch Model • Tugas Akhir 211401034
             </span>
         </div>
     """, unsafe_allow_html=True)
@@ -756,26 +727,26 @@ elif st.session_state.page == "result":
         img_b64 = base64.b64encode(buffered.getvalue()).decode()
 
         st.markdown(f"""
-        <div class="custom-card" style="text-align: center; padding: 24px;">
-            <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; display: flex; align-items: center; justify-content: center; width: 100%; min-height: 320px;">
-                <img src="data:image/png;base64,{img_b64}" style="max-height: 290px; max-width: 100%; object-fit: contain; border-radius: 8px; margin: 0 auto; display: block;">
-            </div>
-            <p style="font-size: 15px; color: #64748b; font-style: italic; margin-top: 14px; margin-bottom: 0; font-weight: 500;">Gambar yang Diunggah</p>
-        </div>
-    """, unsafe_allow_html=True)
-
-    if data:
-        nama_umum_list = "".join([f"<li>{n}</li>" for n in data["nama_umum"]])
-        st.markdown(f"""
-            <div class="custom-card">
-                <span style="font-size:16px; font-weight:700; color:#64748b; text-transform:uppercase;">Nama Ilmiah:</span>
-                <div class="scientific-name">{pred_name}</div>
-                <span style="font-size:16px; font-weight:700; color:#64748b; text-transform:uppercase;">Nama Umum:</span>
-                <ul style="font-size:20px; color:#1e293b; margin-top:6px; padding-left:20px; font-weight: 500; line-height: 1.7;">
-                    {nama_umum_list}
-                </ul>
+            <div class="custom-card" style="text-align: center; padding: 24px;">
+                <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; display: flex; align-items: center; justify-content: center; width: 100%; min-height: 320px;">
+                    <img src="data:image/png;base64,{img_b64}" style="max-height: 290px; max-width: 100%; object-fit: contain; border-radius: 8px; margin: 0 auto; display: block;">
+                </div>
+                <p style="font-size: 15px; color: #64748b; font-style: italic; margin-top: 14px; margin-bottom: 0; font-weight: 500;">Gambar yang Diunggah</p>
             </div>
         """, unsafe_allow_html=True)
+
+        if data:
+            nama_umum_list = "".join([f"<li>{n}</li>" for n in data["nama_umum"]])
+            st.markdown(f"""
+                <div class="custom-card">
+                    <span style="font-size:16px; font-weight:700; color:#64748b; text-transform:uppercase;">Nama Ilmiah:</span>
+                    <div class="scientific-name">{pred_name}</div>
+                    <span style="font-size:16px; font-weight:700; color:#64748b; text-transform:uppercase;">Nama Umum:</span>
+                    <ul style="font-size:20px; color:#1e293b; margin-top:6px; padding-left:20px; font-weight: 500; line-height: 1.7;">
+                        {nama_umum_list}
+                    </ul>
+                </div>
+            """, unsafe_allow_html=True)
 
     with colB:
         status_class = "badge-antidiabetes" if is_antidiabetic else "badge-pembanding"
@@ -885,10 +856,14 @@ elif st.session_state.page == "result":
         catatan_text = data["catatan"].replace("<strong>", "**").replace("</strong>", "**")
         st.warning(catatan_text)
 
-    # Tombol Ganti Gambar (Lebar disamakan dengan kolom view daun / colA)
-        if st.button("🔄 Ganti Gambar", use_container_width=True, type="primary"):
-            st.session_state.page = "upload"
-            st.rerun()
+    # =========================================================
+    # TOMBOL GANTI GAMBAR (DIPINDAHKAN KE BAWAH)
+    # =========================================================
+    st.markdown("<div style='margin-top: 36px; margin-bottom: 10px;'>", unsafe_allow_html=True)
+    if st.button("🔄 Ganti Gambar", use_container_width=True, type="primary"):
+        st.session_state.page = "upload"
+        st.rerun()
+    st.markdown("</div>", unsafe_allow_html=True)
 
 # =========================================================
 # DISCLAIMER NOTICE & FOOTER
