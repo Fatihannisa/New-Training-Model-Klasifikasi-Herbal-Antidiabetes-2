@@ -695,7 +695,7 @@ if st.session_state.page == "upload":
             </h1>
             <p style="font-size: 17px; line-height: 1.7; color: #e2e8f0; margin: 0; max-width: 900px;">
                 DiaHerb dikembangkan untuk membantu mengidentifikasi spesies tanaman herbal antidiabetes berdasarkan citra daun. 
-                Dengan bantuan kecerdasan buatan berbasis <i>Deep Learning</i>, sistem menggunakan model <b>Dual-Branch</b> untuk menganalisis karakteristik tulang daun melalui model <i>LeafNet</i> serta karakteristik visual daun melalui model <i>DenseNet201</i>. 
+                Dengan bantuan kecerdasan buatan berbasis <i>Deep Learning</i>, sistem menggunakan model <b><i>dual-branch</i></b> untuk menganalisis karakteristik tulang daun melalui model <b>LeafNet</b> serta karakteristik visual daun melalui model <b>DenseNet201</b>. 
                 Hasil analisis kedua karakteristik tersebut kemudian digunakan untuk menentukan spesies tanaman yang paling sesuai.
             </p>
         </div>
@@ -744,8 +744,8 @@ if st.session_state.page == "upload":
                     <li>Foto <b>1 helai daun</b> saja.</li>
                     <li>Pastikan helai daun berada tepat di tengah frame kamera.</li>
                     <li>Pencahayaan terang agar struktur urat/venasi daun terlihat jelas.</li>
-                    <li><b>Latar belakang wajib polos</b> dan berwarna terang (diutamakan putih).</li>
-                    <li>Foto diambil dari sisi atas atau bawah tegak lurus.</li>
+                    <li><b>Latar belakang wajib polos</b> dan berwarna terang.</li>
+                    <li>Foto diambil dari sisi atas atau bawah helai daun.</li>
                 </ul>
                 <hr style="border: 0; border-top: 1px solid #f1f5f9; margin: 20px 0;">
                 <h4 style="color:#0f172a; font-size:14px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:12px;">Contoh Sampel yang Baik:</h4>
