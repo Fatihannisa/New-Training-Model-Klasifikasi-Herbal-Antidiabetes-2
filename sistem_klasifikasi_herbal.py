@@ -956,9 +956,14 @@ elif st.session_state.page == "result":
             st.write("*(Tanaman ini merupakan tanaman pembanding dan tidak memiliki tata cara pengolahan ramuan antidiabetes).*")
 
         # CATATAN KHUSUS
-        if data and data("catatan"):
-            st.markdown("<div class='section-header'>⚠️ Catatan Penting</div>", unsafe_allow_html=True)
-            catatan_text = data["catatan"].replace("<strong>", "**").replace("</strong>", "**")
+        if data and data.get("catatan"):
+            st.markdown(
+                "<div class='section-header'>⚠️ Catatan Penting</div>",
+                unsafe_allow_html=True
+            )
+            catatan_text = data["catatan"].replace(
+                "<strong>", "**"
+            ).replace("</strong>", "**")
             st.warning(catatan_text)
 
     # Tombol Ganti Gambar (Lebar disamakan dengan kolom view daun / colA)
