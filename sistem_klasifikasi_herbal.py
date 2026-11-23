@@ -527,6 +527,22 @@ def predict(image):
     input_details = interpreter.get_input_details()
     output_details = interpreter.get_output_details()
 
+    st.write("INPUT DETAILS:")
+    for item in input_details:
+        st.write({
+            "name": item["name"],
+            "shape": item["shape"].tolist(),
+            "index": item["index"]
+        })
+    
+    st.write("OUTPUT DETAILS:")
+    for item in output_details:
+        st.write({
+            "name": item["name"],
+            "shape": item["shape"].tolist(),
+            "index": item["index"]
+        })
+
     # Masukkan input berdasarkan nama tensor
     for inp in input_details:
         name = inp["name"].lower()
