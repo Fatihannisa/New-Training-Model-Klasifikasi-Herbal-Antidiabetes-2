@@ -554,6 +554,12 @@ def predict(image):
     if embedding is None or pred is None:
         raise RuntimeError("Output embedding atau klasifikasi tidak ditemukan.")
 
+    nearest_idx = int(np.argmin(distances))
+
+    st.write("Kelas terdekat OOD:", nearest_idx)
+    st.write("Jarak terdekat OOD:", min_distance)
+    st.write("Jarak lima kelas terdekat:", np.sort(distances)[:5])
+
     # Hitung Mahalanobis Distance
     differences = embedding[np.newaxis, :] - CLASS_MEANS
 
