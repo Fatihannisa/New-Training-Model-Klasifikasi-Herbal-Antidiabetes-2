@@ -566,6 +566,11 @@ def predict(image):
 
     distances = np.sqrt(np.maximum(distances_squared, 0))
     min_distance = float(np.min(distances))
+    st.write("Jarak Mahalanobis:", min_distance)
+    st.write("Threshold:", OOD_THRESHOLD)
+    st.write("Embedding shape:", embedding.shape)
+    st.write("Prediksi top-1:", LABELS[int(np.argmax(pred))])
+    st.write("Confidence:", float(np.max(pred)))
 
     # Urutkan prediksi
     top_idx = np.argsort(pred)[::-1]
