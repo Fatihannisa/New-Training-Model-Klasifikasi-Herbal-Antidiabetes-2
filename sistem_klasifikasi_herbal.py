@@ -554,15 +554,6 @@ def predict(image):
     if embedding is None or pred is None:
         raise RuntimeError("Output embedding atau klasifikasi tidak ditemukan.")
 
-    nearest_idx = int(np.argmin(distances))
-
-    st.write("Kelas terdekat OOD:", nearest_idx)
-    st.write("Jarak terdekat OOD:", min_distance)
-    st.write("Jarak lima kelas terdekat:", np.sort(distances)[:5])
-
-    # Hitung Mahalanobis Distance
-    differences = embedding[np.newaxis, :] - CLASS_MEANS
-
     distances_squared = np.einsum(
         "bi,ij,bj->b",
         differences,
@@ -577,6 +568,15 @@ def predict(image):
     st.write("Embedding shape:", embedding.shape)
     st.write("Prediksi top-1:", LABELS[int(np.argmax(pred))])
     st.write("Confidence:", float(np.max(pred)))
+
+    nearest_idx = int(np.argmin(distances))
+
+    st.write("Kelas terdekat OOD:", nearest_idx)
+    st.write("Jarak terdekat OOD:", min_distance)
+    st.write("Jarak lima kelas terdekat:", np.sort(distances)[:5])
+
+    # Hitung Mahalanobis Distance
+    differences = embedding[np.newaxis, :] - CLASS_MEANS
 
     # Urutkan prediksi
     top_idx = np.argsort(pred)[::-1]
