@@ -548,6 +548,7 @@ def predict(image):
 
         if output_size == 512:
             embedding = value.astype(np.float32)
+            np.save("embedding_bidara_tflite.npy", embedding)
         elif output_size == 20:
             pred = value.astype(np.float32)
 
