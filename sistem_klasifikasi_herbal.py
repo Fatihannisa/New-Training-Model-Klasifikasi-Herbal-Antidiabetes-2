@@ -952,8 +952,8 @@ elif st.session_state.page == "result":
                         </a>
                     </div>
                 """, unsafe_allow_html=True)
-    else:
-        st.write("*(Tanaman ini merupakan tanaman pembanding dan tidak memiliki tata cara pengolahan ramuan antidiabetes).*")
+        else:
+            st.write("*(Tanaman ini merupakan tanaman pembanding dan tidak memiliki tata cara pengolahan ramuan antidiabetes).*")
 
     # CATATAN KHUSUS
     if data and data["catatan"]:
