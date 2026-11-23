@@ -61,7 +61,7 @@ CONFIG = {
     "CLAHE_TILE": (4, 4),
     "VEIN_STRENGTH": 1.2
 }
-UNKNOWN_THRESHOLD = 0.70
+UNKNOWN_THRESHOLD = 0.30
 
 # =========================================================
 # DATABASE HERBAL DINAMIS
