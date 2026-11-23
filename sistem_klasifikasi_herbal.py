@@ -504,6 +504,7 @@ def to_vein_input(img: np.ndarray) -> np.ndarray:
   )
   return vein.astype(np.float32)
 
+
 def predict(image):
     img = np.array(image.convert("RGB"))
     img_bgr = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
@@ -521,29 +522,10 @@ def predict(image):
     if interpreter is None:
         raise RuntimeError("Model tidak tersedia.")
 
-    if CLASS_MEANS is None or PRECISION is None:
-        raise RuntimeError("Profil Mahalanobis tidak tersedia.")
-
     input_details = interpreter.get_input_details()
     output_details = interpreter.get_output_details()
 
-    st.write("INPUT DETAILS:")
-    for item in input_details:
-        st.write({
-            "name": item["name"],
-            "shape": item["shape"].tolist(),
-            "index": item["index"]
-        })
-    
-    st.write("OUTPUT DETAILS:")
-    for item in output_details:
-        st.write({
-            "name": item["name"],
-            "shape": item["shape"].tolist(),
-            "index": item["index"]
-        })
-
-    # Masukkan input berdasarkan nama tensor
+    # Masukkan citra ke masing-masing cabang model
     for inp in input_details:
         name = inp["name"].lower()
 
@@ -554,70 +536,22 @@ def predict(image):
 
     interpreter.invoke()
 
-    # Ambil embedding dan probabilitas klasifikasi
-    embedding = None
+    # Ambil output klasifikasi 20 kelas
     pred = None
 
     for out in output_details:
         value = interpreter.get_tensor(out["index"])[0]
-        output_size = value.shape[-1]
 
-        if output_size == 512:
-            embedding = value.astype(np.float32)
-            np.save("embedding_bidara_tflite.npy", embedding)
-        elif output_size == 20:
+        if value.shape[-1] == 20:
             pred = value.astype(np.float32)
+            break
 
-    if embedding is None or pred is None:
-        raise RuntimeError("Output embedding atau klasifikasi tidak ditemukan.")
-    
-    import base64
-    encoded = base64.b64encode(
-        embedding.astype(np.float32).tobytes()
-    ).decode("utf-8")
-    
-    st.download_button(
-        label="Unduh Embedding TFLite",
-        data=base64.b64decode(encoded),
-        file_name="embedding_bidara_tflite.bin",
-        mime="application/octet-stream"
-    )
+    if pred is None:
+        raise RuntimeError("Output klasifikasi 20 kelas tidak ditemukan.")
 
-    # Hitung Mahalanobis Distance
-    differences = embedding[np.newaxis, :] - CLASS_MEANS
-    
-    distances_squared = np.einsum(
-        "bi,ij,bj->b",
-        differences,
-        PRECISION,
-        differences
-    )
-
-    distances = np.sqrt(np.maximum(distances_squared, 0))
-    min_distance = float(np.min(distances))
-    nearest_idx = int(np.argmin(distances))
-
-    st.write("Jarak Mahalanobis:", min_distance)
-    st.write("Threshold:", OOD_THRESHOLD)
-    st.write("Embedding shape:", embedding.shape)
-    st.write("Prediksi top-1:", LABELS[int(np.argmax(pred))])
-    st.write("Confidence:", float(np.max(pred)))
-    st.write("Kelas terdekat OOD:", nearest_idx)
-    st.write("Jarak terdekat OOD:", min_distance)
-    st.write("Jarak lima kelas terdekat:", np.sort(distances)[:5])
-
-    # Urutkan prediksi
+    # Urutkan prediksi berdasarkan probabilitas
     top_idx = np.argsort(pred)[::-1]
     max_conf = float(pred[top_idx[0]])
-
-    # Tolak kelas di luar 20 kelas
-    if min_distance > OOD_THRESHOLD:
-        return {
-            "recognized": False,
-            "confidence": max_conf,
-            "distance": min_distance,
-            "top5": []
-        }
 
     top5 = [
         (LABELS[idx], float(pred[idx]))
@@ -627,7 +561,6 @@ def predict(image):
     return {
         "recognized": True,
         "confidence": max_conf,
-        "distance": min_distance,
         "top5": top5
     }
     
