@@ -37,15 +37,34 @@ bg_session = get_bg_session()
 # =========================================================
 @st.cache_resource
 def load_tflite():
-    model_file = "leafnet_dual_branch.tflite"
+    model_file = "leafnet_ood.tflite"
     if not os.path.exists(model_file):
-        st.warning(f"File model '{model_file}' tidak ditemukan di directory root. Menggunakan simulasi prediksi...")
+        st.warning(f"File model '{model_file}' tidak ditemukan.")
         return None
     interpreter = tf.lite.Interpreter(model_path=model_file)
     interpreter.allocate_tensors()
     return interpreter
+    
+@st.cache_resource
+def load_ood_profiles():
+    profile_file = "mahalanobis_profiles.npz"
 
+    if not os.path.exists(profile_file):
+        st.error(f"File '{profile_file}' tidak ditemukan.")
+        return None, None
+
+    data = np.load(profile_file)
+
+    class_means = data["class_means"].astype(np.float32)
+    precision = data["precision"].astype(np.float32)
+
+    return class_means, precision
+    
 interpreter = load_tflite()
+CLASS_MEANS, PRECISION = load_ood_profiles()
+
+# Threshold kandidat awal
+OOD_THRESHOLD = 31.0
 
 LABELS = [
     "Acalypha siamensis", "Andrographis paniculata", "Cananga odorata", "Capsicum sp", "Catharanthus roseus",
@@ -61,7 +80,7 @@ CONFIG = {
     "CLAHE_TILE": (4, 4),
     "VEIN_STRENGTH": 1.2
 }
-UNKNOWN_THRESHOLD = 0.10
+OOD_THRESHOLD = 31.0
 
 # =========================================================
 # DATABASE HERBAL DINAMIS
@@ -502,9 +521,13 @@ def predict(image):
     if interpreter is None:
         raise RuntimeError("Model tidak tersedia.")
 
+    if CLASS_MEANS is None or PRECISION is None:
+        raise RuntimeError("Profil Mahalanobis tidak tersedia.")
+
     input_details = interpreter.get_input_details()
     output_details = interpreter.get_output_details()
 
+    # Masukkan input berdasarkan nama tensor
     for inp in input_details:
         name = inp["name"].lower()
 
@@ -515,19 +538,45 @@ def predict(image):
 
     interpreter.invoke()
 
-    pred = interpreter.get_tensor(
-        output_details[0]["index"]
-    )[0]
+    # Ambil embedding dan probabilitas klasifikasi
+    embedding = None
+    pred = None
 
-    # Urutkan prediksi berdasarkan nilai confidence
+    for out in output_details:
+        value = interpreter.get_tensor(out["index"])[0]
+        output_size = value.shape[-1]
+
+        if output_size == 512:
+            embedding = value.astype(np.float32)
+        elif output_size == 20:
+            pred = value.astype(np.float32)
+
+    if embedding is None or pred is None:
+        raise RuntimeError("Output embedding atau klasifikasi tidak ditemukan.")
+
+    # Hitung Mahalanobis Distance
+    differences = embedding[np.newaxis, :] - CLASS_MEANS
+
+    distances_squared = np.einsum(
+        "bi,ij,bj->b",
+        differences,
+        PRECISION,
+        differences
+    )
+
+    distances = np.sqrt(np.maximum(distances_squared, 0))
+    min_distance = float(np.min(distances))
+
+    # Urutkan prediksi
     top_idx = np.argsort(pred)[::-1]
     max_conf = float(pred[top_idx[0]])
 
-    # Mekanisme penolakan kelas tidak dikenal
-    if max_conf < UNKNOWN_THRESHOLD:
+    # Tolak kelas di luar 20 kelas
+    if min_distance > OOD_THRESHOLD:
         return {
             "recognized": False,
             "confidence": max_conf,
+            "distance": min_distance,
             "top5": []
         }
 
@@ -539,9 +588,10 @@ def predict(image):
     return {
         "recognized": True,
         "confidence": max_conf,
+        "distance": min_distance,
         "top5": top5
     }
-
+    
 # =========================================================
 # STYLING CUSTOM CSS
 # =========================================================
