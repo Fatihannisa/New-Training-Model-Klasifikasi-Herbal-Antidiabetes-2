@@ -554,6 +554,18 @@ def predict(image):
 
     if embedding is None or pred is None:
         raise RuntimeError("Output embedding atau klasifikasi tidak ditemukan.")
+    
+    import base64
+    encoded = base64.b64encode(
+        embedding.astype(np.float32).tobytes()
+    ).decode("utf-8")
+    
+    st.download_button(
+        label="Unduh Embedding TFLite",
+        data=base64.b64decode(encoded),
+        file_name="embedding_bidara_tflite.bin",
+        mime="application/octet-stream"
+    )
 
     # Hitung Mahalanobis Distance
     differences = embedding[np.newaxis, :] - CLASS_MEANS
