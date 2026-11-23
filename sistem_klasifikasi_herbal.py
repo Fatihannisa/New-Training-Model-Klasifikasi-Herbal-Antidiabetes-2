@@ -59,9 +59,9 @@ CONFIG = {
     "TARGET_BRIGHTNESS": 110,
     "CLAHE_CLIP": 4.0,
     "CLAHE_TILE": (4, 4),
-    "VEIN_STRENGTH": 1.2,
-    "UNKNOWN_THRESHOLD": 0.70
+    "VEIN_STRENGTH": 1.2
 }
+UNKNOWN_THRESHOLD = 0.70
 
 # =========================================================
 # DATABASE HERBAL DINAMIS
