@@ -950,60 +950,60 @@ else:
             st.info("Tidak tersedia artikel khusus untuk tanaman ini.")
     
         with col_link2:
-        st.markdown(
-            "<div class='section-header'>📚 Tautan Jurnal Penelitian</div>",
-            unsafe_allow_html=True
-        )
-        if data and data.get("tautan_jurnal"):
-            judul_jurnal = data.get("judul_jurnal", "Baca jurnal penelitian")
             st.markdown(
-                f"""
-                <a href="{data['tautan_jurnal']}" target="_blank"
-                   style="text-decoration: none; color: #0066CC;">
-                    {judul_jurnal}
-                </a>
-                """,
+                "<div class='section-header'>📚 Tautan Jurnal Penelitian</div>",
                 unsafe_allow_html=True
             )
-        else:
-            st.info("Tidak tersedia jurnal khusus untuk tanaman ini.")
-
-    # CARA MENGOLAH HERBAL
-    st.markdown("<div class='section-header'>☕ Cara Mengolah Herbal Antidiabetes</div>", unsafe_allow_html=True)
-    if data and data["cara_mengolah"]:
-        for idx, langkah in enumerate(data["cara_mengolah"], 1):
-            st.markdown(f"**{idx}.** {langkah}")
-            
-        # Bagian Tautan Referensi Pengolahan
-        if data.get("tautan_pengolahan"):
-            nama_sumber = data.get("sumber_pengolahan", "Baca referensi cara pengolahan selengkapnya")
-            st.markdown(f"""
-                <div style="margin-top: 14px; font-size: 15px; color: #475569;">
-                    <span style="font-weight: 600;">📖 Sumber Referensi Pengolahan:</span> 
-                    <a href="{data['tautan_pengolahan']}" target="_blank" style="text-decoration: none; color: #0066CC; font-weight: 500;">
-                        {nama_sumber} ↗
+            if data and data.get("tautan_jurnal"):
+                judul_jurnal = data.get("judul_jurnal", "Baca jurnal penelitian")
+                st.markdown(
+                    f"""
+                    <a href="{data['tautan_jurnal']}" target="_blank"
+                       style="text-decoration: none; color: #0066CC;">
+                        {judul_jurnal}
                     </a>
-                </div>
-            """, unsafe_allow_html=True)
-    else:
-        st.write("*(Tanaman ini merupakan tanaman pembanding dan tidak memiliki tata cara pengolahan ramuan antidiabetes).*")
-
-    # CATATAN KHUSUS
-    if data and data.get("catatan"):
-        st.markdown(
-            "<div class='section-header'>⚠️ Catatan Penting</div>",
-            unsafe_allow_html=True
-        )
-        catatan_text = data["catatan"].replace(
-            "<strong>", "**"
-        ).replace("</strong>", "**")
-        st.warning(catatan_text)
-
-    # Tombol Ganti Gambar
-    st.markdown("<div style='margin-top: 30px;'></div>", unsafe_allow_html=True)
-    if st.button("🔄 Ganti Gambar", use_container_width=True, type="primary"):
-        st.session_state.page = "upload"
-        st.rerun()
+                    """,
+                    unsafe_allow_html=True
+                )
+            else:
+                st.info("Tidak tersedia jurnal khusus untuk tanaman ini.")
+    
+        # CARA MENGOLAH HERBAL
+        st.markdown("<div class='section-header'>☕ Cara Mengolah Herbal Antidiabetes</div>", unsafe_allow_html=True)
+        if data and data["cara_mengolah"]:
+            for idx, langkah in enumerate(data["cara_mengolah"], 1):
+                st.markdown(f"**{idx}.** {langkah}")
+                
+            # Bagian Tautan Referensi Pengolahan
+            if data.get("tautan_pengolahan"):
+                nama_sumber = data.get("sumber_pengolahan", "Baca referensi cara pengolahan selengkapnya")
+                st.markdown(f"""
+                    <div style="margin-top: 14px; font-size: 15px; color: #475569;">
+                        <span style="font-weight: 600;">📖 Sumber Referensi Pengolahan:</span> 
+                        <a href="{data['tautan_pengolahan']}" target="_blank" style="text-decoration: none; color: #0066CC; font-weight: 500;">
+                            {nama_sumber} ↗
+                        </a>
+                    </div>
+                """, unsafe_allow_html=True)
+        else:
+            st.write("*(Tanaman ini merupakan tanaman pembanding dan tidak memiliki tata cara pengolahan ramuan antidiabetes).*")
+    
+        # CATATAN KHUSUS
+        if data and data.get("catatan"):
+            st.markdown(
+                "<div class='section-header'>⚠️ Catatan Penting</div>",
+                unsafe_allow_html=True
+            )
+            catatan_text = data["catatan"].replace(
+                "<strong>", "**"
+            ).replace("</strong>", "**")
+            st.warning(catatan_text)
+    
+        # Tombol Ganti Gambar
+        st.markdown("<div style='margin-top: 30px;'></div>", unsafe_allow_html=True)
+        if st.button("🔄 Ganti Gambar", use_container_width=True, type="primary"):
+            st.session_state.page = "upload"
+            st.rerun()
             
 # =========================================================
 # DISCLAIMER NOTICE & FOOTER
