@@ -554,12 +554,12 @@ def predict(image):
     max_conf = float(np.max(pred))
     entropy = float(-np.sum(pred * np.log(pred + 1e-10)))
 
-    if max_conf >= 0.70:
+    if max_conf >= 0.55:
         is_unknown = False
-    elif max_conf < 0.45:
+    elif max_conf < 0.15:
         is_unknown = True
     else:
-        is_unknown = entropy > 1.40
+        is_unknown = entropy > 1.80
 
     top_idx = np.argsort(pred)[::-1]
     top5 = [(LABELS[idx], float(pred[idx])) for idx in top_idx[:5]]
