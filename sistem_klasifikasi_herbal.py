@@ -506,11 +506,28 @@ def to_vein_input(img: np.ndarray) -> np.ndarray:
   )
   return vein.astype(np.float32)
 
+def is_white_background(img_bgr, threshold=235, border_ratio=0.80):
+    """Mengecek apakah bagian tepi gambar sudah berlatar belakang putih polos."""
+    h, w, _ = img_bgr.shape
+    top = img_bgr[0:15, :]
+    bottom = img_bgr[h-15:h, :]
+    left = img_bgr[:, 0:15]
+    right = img_bgr[:, w-15:w]
+    borders = np.concatenate([top.reshape(-1, 3), bottom.reshape(-1, 3), left.reshape(-1, 3), right.reshape(-1, 3)], axis=0)
+    white_pixels = np.all(borders > threshold, axis=1)
+    return np.mean(white_pixels) >= border_ratio
+
 def predict(image):
     img = np.array(image.convert("RGB"))
     img_bgr = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
     img_bgr = resize_input_image(img_bgr, (512, 512))
-    processed = preprocess_camera_leaf(img_bgr)
+    
+    # Jika background sudah putih polos (seperti dataset), jangan dirusak dengan rembg!
+    if is_white_background(img_bgr):
+        processed = cv2.resize(img_bgr, CONFIG["IMG_SIZE"], interpolation=cv2.INTER_CUBIC)
+    else:
+        processed = preprocess_camera_leaf(img_bgr)
+        
     rgb_input = np.expand_dims(to_rgb_input(processed), 0).astype(np.float32)
     vein_input = np.expand_dims(to_vein_input(processed), 0).astype(np.float32)
 
@@ -524,14 +541,12 @@ def predict(image):
             elif "vein" in name:
                 interpreter.set_tensor(inp["index"], vein_input)
         interpreter.invoke()
-        pred = interpreter.get_tensor(output_details[0]["index"])[0]
+        pred = interpreter.get_tensor(output_details["index"])
     else:
-        # Pseudo-prediction fallback if model file missing during local preview
         np.random.seed(int(np.sum(processed) % 10000))
         pred = np.random.dirichlet(np.ones(len(LABELS)) * 0.5)
-        pred[1] = 0.945  # Default to Sambiloto
+        pred = 0.945
 
-    # Hitung Confidence Tertinggi & Shannon Entropy untuk Deteksi Unknown
     max_conf = float(np.max(pred))
     entropy = float(-np.sum(pred * np.log(pred + 1e-10)))
     is_unknown = (max_conf < CONFIG["CONF_THRESHOLD"]) or (entropy > CONFIG["ENTROPY_THRESHOLD"])
@@ -844,166 +859,166 @@ elif st.session_state.page == "result":
             st.session_state.page = "upload"
             st.rerun()
 
-# =========================================================
-# JIKA OBJEK DIKENALI (SALAH SATU DARI 20 SPESIES)
-# =========================================================
-else:
-    pred_name, conf = top5[0]
-    data = herbal_info.get(pred_name, None)
-    is_antidiabetic = data["status"] == "Tanaman herbal antidiabetes" if data else False
-
-    colA, colB = st.columns([1, 1])
-
-    # KANAN & KIRI ATAS
-    with colA:
-        buffered = io.BytesIO()
-        img_input.save(buffered, format="PNG")
-        img_b64 = base64.b64encode(buffered.getvalue()).decode()
-
-        st.markdown(f"""
-            <div class="custom-card" style="text-align: center; padding: 24px;">
-                <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; display: flex; align-items: center; justify-content: center; width: 100%; min-height: 320px;">
-                    <img src="data:image/png;base64,{img_b64}" style="max-height: 290px; max-width: 100%; object-fit: contain; border-radius: 8px; margin: 0 auto; display: block;">
-                </div>
-                <p style="font-size: 15px; color: #64748b; font-style: italic; margin-top: 14px; margin-bottom: 0; font-weight: 500;">Gambar yang Diunggah</p>
-            </div>
-        """, unsafe_allow_html=True)
-
-        if data:
-            nama_umum_list = "".join([f"<li>{n}</li>" for n in data["nama_umum"]])
+    # =========================================================
+    # JIKA OBJEK DIKENALI (SALAH SATU DARI 20 SPESIES)
+    # =========================================================
+    else:
+        pred_name, conf = top5[0]
+        data = herbal_info.get(pred_name, None)
+        is_antidiabetic = data["status"] == "Tanaman herbal antidiabetes" if data else False
+    
+        colA, colB = st.columns([1, 1])
+    
+        # KANAN & KIRI ATAS
+        with colA:
+            buffered = io.BytesIO()
+            img_input.save(buffered, format="PNG")
+            img_b64 = base64.b64encode(buffered.getvalue()).decode()
+    
             st.markdown(f"""
-                <div class="custom-card">
-                    <span style="font-size:16px; font-weight:700; color:#64748b; text-transform:uppercase;">Nama Ilmiah:</span>
-                    <div class="scientific-name">{pred_name}</div>
-                    <span style="font-size:16px; font-weight:700; color:#64748b; text-transform:uppercase;">Nama Umum:</span>
-                    <ul style="font-size:20px; color:#1e293b; margin-top:6px; padding-left:20px; font-weight: 500; line-height: 1.7;">
-                        {nama_umum_list}
-                    </ul>
+                <div class="custom-card" style="text-align: center; padding: 24px;">
+                    <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; display: flex; align-items: center; justify-content: center; width: 100%; min-height: 320px;">
+                        <img src="data:image/png;base64,{img_b64}" style="max-height: 290px; max-width: 100%; object-fit: contain; border-radius: 8px; margin: 0 auto; display: block;">
+                    </div>
+                    <p style="font-size: 15px; color: #64748b; font-style: italic; margin-top: 14px; margin-bottom: 0; font-weight: 500;">Gambar yang Diunggah</p>
                 </div>
             """, unsafe_allow_html=True)
-
-    with colB:
-        status_class = "badge-antidiabetes" if is_antidiabetic else "badge-pembanding"
-        status_text = data["status"] if data else "Tanaman Pembanding"
-
-        st.markdown(f"""
-            <div class="custom-card">
-                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-                    <span style="font-size:16px; font-weight:700; color:#64748b;">STATUS TANAMAN:</span>
-                    <span class="{status_class}">{status_text}</span>
-                </div>
-                <hr style="border-top:1px solid #f1f5f9; margin:12px 0;">
-                <div style="display:flex; justify-content:space-between; align-items:baseline;">
-                    <span style="font-size:16px; font-weight:600; color:#334155;">Kepercayaan Sistem:</span>
-                    <span style="font-size:28px; font-weight:800; color:#047857; font-family:monospace;">{conf * 100:.2f}%</span>
-                </div>
-            </div>
-        """, unsafe_allow_html=True)
-
-        # Container Top-5 Prediksi Progress Bar
-        top5_items_html = ""
-        for i, (label, score) in enumerate(top5, 1):
-            pct = score * 100
-            top5_items_html += (
-                f'<div style="margin-bottom: 14px;">'
-                f'<div style="display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; margin-bottom: 6px; color: #1e293b;">'
-                f'<span><b>{i}.</b> <span style="font-style: italic; font-weight: 500; color: #0f172a;">{label}</span></span>'
-                f'<code style="color: #047857; font-weight: 700; font-size: 15px; font-family: monospace;">{pct:.2f}%</code>'
-                f'</div>'
-                f'<div style="width: 100%; background-color: #f1f5f9; height: 12px; border-radius: 999px; overflow: hidden;">'
-                f'<div style="width: {pct:.2f}%; background-color: #047857; height: 100%; border-radius: 999px;"></div>'
-                f'</div>'
-                f'</div>'
-            )
-
-        st.markdown(
-            f'<div class="custom-card">'
-            f'<span style="font-size: 16px; font-weight: 700; color: #0f172a; display: block; margin-bottom: 16px;">Top-5 Prediksi Model:</span>'
-            f'{top5_items_html}'
-            f'</div>',
-            unsafe_allow_html=True
-        )
-
-    # INFORMASI DETAIL HERBAL
-    st.markdown("<div class='section-header'>🌿 Informasi Herbal</div>", unsafe_allow_html=True)
-    st.write(data["informasi"] if data else "Tidak ada informasi khusus.")
-
-    # TAUTAN ARTIKEL & JURNAL
-    col_link1, col_link2 = st.columns(2)
-    with col_link1:
-        st.markdown(
-            "<div class='section-header'>🔗 Tautan Artikel Terkait</div>",
-            unsafe_allow_html=True
-        )
-        if data and data.get("tautan_artikel"):
-            judul_artikel = data.get("judul_artikel", "Baca artikel terkait")
-            st.markdown(
-                f"""
-                <a href="{data['tautan_artikel']}" target="_blank"
-                   style="text-decoration: none; color: #0066CC;">
-                    {judul_artikel}
-                </a>
-                """,
-                unsafe_allow_html=True
-            )
-        else:
-            st.info("Tidak tersedia artikel khusus untuk tanaman ini.")
     
-        with col_link2:
+            if data:
+                nama_umum_list = "".join([f"<li>{n}</li>" for n in data["nama_umum"]])
+                st.markdown(f"""
+                    <div class="custom-card">
+                        <span style="font-size:16px; font-weight:700; color:#64748b; text-transform:uppercase;">Nama Ilmiah:</span>
+                        <div class="scientific-name">{pred_name}</div>
+                        <span style="font-size:16px; font-weight:700; color:#64748b; text-transform:uppercase;">Nama Umum:</span>
+                        <ul style="font-size:20px; color:#1e293b; margin-top:6px; padding-left:20px; font-weight: 500; line-height: 1.7;">
+                            {nama_umum_list}
+                        </ul>
+                    </div>
+                """, unsafe_allow_html=True)
+    
+        with colB:
+            status_class = "badge-antidiabetes" if is_antidiabetic else "badge-pembanding"
+            status_text = data["status"] if data else "Tanaman Pembanding"
+    
+            st.markdown(f"""
+                <div class="custom-card">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                        <span style="font-size:16px; font-weight:700; color:#64748b;">STATUS TANAMAN:</span>
+                        <span class="{status_class}">{status_text}</span>
+                    </div>
+                    <hr style="border-top:1px solid #f1f5f9; margin:12px 0;">
+                    <div style="display:flex; justify-content:space-between; align-items:baseline;">
+                        <span style="font-size:16px; font-weight:600; color:#334155;">Kepercayaan Sistem:</span>
+                        <span style="font-size:28px; font-weight:800; color:#047857; font-family:monospace;">{conf * 100:.2f}%</span>
+                    </div>
+                </div>
+            """, unsafe_allow_html=True)
+    
+            # Container Top-5 Prediksi Progress Bar
+            top5_items_html = ""
+            for i, (label, score) in enumerate(top5, 1):
+                pct = score * 100
+                top5_items_html += (
+                    f'<div style="margin-bottom: 14px;">'
+                    f'<div style="display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; margin-bottom: 6px; color: #1e293b;">'
+                    f'<span><b>{i}.</b> <span style="font-style: italic; font-weight: 500; color: #0f172a;">{label}</span></span>'
+                    f'<code style="color: #047857; font-weight: 700; font-size: 15px; font-family: monospace;">{pct:.2f}%</code>'
+                    f'</div>'
+                    f'<div style="width: 100%; background-color: #f1f5f9; height: 12px; border-radius: 999px; overflow: hidden;">'
+                    f'<div style="width: {pct:.2f}%; background-color: #047857; height: 100%; border-radius: 999px;"></div>'
+                    f'</div>'
+                    f'</div>'
+                )
+    
             st.markdown(
-                "<div class='section-header'>📚 Tautan Jurnal Penelitian</div>",
+                f'<div class="custom-card">'
+                f'<span style="font-size: 16px; font-weight: 700; color: #0f172a; display: block; margin-bottom: 16px;">Top-5 Prediksi Model:</span>'
+                f'{top5_items_html}'
+                f'</div>',
                 unsafe_allow_html=True
             )
-            if data and data.get("tautan_jurnal"):
-                judul_jurnal = data.get("judul_jurnal", "Baca jurnal penelitian")
+    
+        # INFORMASI DETAIL HERBAL
+        st.markdown("<div class='section-header'>🌿 Informasi Herbal</div>", unsafe_allow_html=True)
+        st.write(data["informasi"] if data else "Tidak ada informasi khusus.")
+    
+        # TAUTAN ARTIKEL & JURNAL
+        col_link1, col_link2 = st.columns(2)
+        with col_link1:
+            st.markdown(
+                "<div class='section-header'>🔗 Tautan Artikel Terkait</div>",
+                unsafe_allow_html=True
+            )
+            if data and data.get("tautan_artikel"):
+                judul_artikel = data.get("judul_artikel", "Baca artikel terkait")
                 st.markdown(
                     f"""
-                    <a href="{data['tautan_jurnal']}" target="_blank"
+                    <a href="{data['tautan_artikel']}" target="_blank"
                        style="text-decoration: none; color: #0066CC;">
-                        {judul_jurnal}
+                        {judul_artikel}
                     </a>
                     """,
                     unsafe_allow_html=True
                 )
             else:
-                st.info("Tidak tersedia jurnal khusus untuk tanaman ini.")
-    
-        # CARA MENGOLAH HERBAL
-        st.markdown("<div class='section-header'>☕ Cara Mengolah Herbal Antidiabetes</div>", unsafe_allow_html=True)
-        if data and data["cara_mengolah"]:
-            for idx, langkah in enumerate(data["cara_mengolah"], 1):
-                st.markdown(f"**{idx}.** {langkah}")
-                
-            # Bagian Tautan Referensi Pengolahan
-            if data.get("tautan_pengolahan"):
-                nama_sumber = data.get("sumber_pengolahan", "Baca referensi cara pengolahan selengkapnya")
-                st.markdown(f"""
-                    <div style="margin-top: 14px; font-size: 15px; color: #475569;">
-                        <span style="font-weight: 600;">📖 Sumber Referensi Pengolahan:</span> 
-                        <a href="{data['tautan_pengolahan']}" target="_blank" style="text-decoration: none; color: #0066CC; font-weight: 500;">
-                            {nama_sumber} ↗
+                st.info("Tidak tersedia artikel khusus untuk tanaman ini.")
+        
+            with col_link2:
+                st.markdown(
+                    "<div class='section-header'>📚 Tautan Jurnal Penelitian</div>",
+                    unsafe_allow_html=True
+                )
+                if data and data.get("tautan_jurnal"):
+                    judul_jurnal = data.get("judul_jurnal", "Baca jurnal penelitian")
+                    st.markdown(
+                        f"""
+                        <a href="{data['tautan_jurnal']}" target="_blank"
+                           style="text-decoration: none; color: #0066CC;">
+                            {judul_jurnal}
                         </a>
-                    </div>
-                """, unsafe_allow_html=True)
-        else:
-            st.write("*(Tanaman ini merupakan tanaman pembanding dan tidak memiliki tata cara pengolahan ramuan antidiabetes).*")
-    
-        # CATATAN KHUSUS
-        if data and data.get("catatan"):
-            st.markdown(
-                "<div class='section-header'>⚠️ Catatan Penting</div>",
-                unsafe_allow_html=True
-            )
-            catatan_text = data["catatan"].replace(
-                "<strong>", "**"
-            ).replace("</strong>", "**")
-            st.warning(catatan_text)
-    
-        # Tombol Ganti Gambar
-        st.markdown("<div style='margin-top: 30px;'></div>", unsafe_allow_html=True)
-        if st.button("🔄 Ganti Gambar", use_container_width=True, type="primary"):
-            st.session_state.page = "upload"
-            st.rerun()
+                        """,
+                        unsafe_allow_html=True
+                    )
+                else:
+                    st.info("Tidak tersedia jurnal khusus untuk tanaman ini.")
+        
+            # CARA MENGOLAH HERBAL
+            st.markdown("<div class='section-header'>☕ Cara Mengolah Herbal Antidiabetes</div>", unsafe_allow_html=True)
+            if data and data["cara_mengolah"]:
+                for idx, langkah in enumerate(data["cara_mengolah"], 1):
+                    st.markdown(f"**{idx}.** {langkah}")
+                    
+                # Bagian Tautan Referensi Pengolahan
+                if data.get("tautan_pengolahan"):
+                    nama_sumber = data.get("sumber_pengolahan", "Baca referensi cara pengolahan selengkapnya")
+                    st.markdown(f"""
+                        <div style="margin-top: 14px; font-size: 15px; color: #475569;">
+                            <span style="font-weight: 600;">📖 Sumber Referensi Pengolahan:</span> 
+                            <a href="{data['tautan_pengolahan']}" target="_blank" style="text-decoration: none; color: #0066CC; font-weight: 500;">
+                                {nama_sumber} ↗
+                            </a>
+                        </div>
+                    """, unsafe_allow_html=True)
+            else:
+                st.write("*(Tanaman ini merupakan tanaman pembanding dan tidak memiliki tata cara pengolahan ramuan antidiabetes).*")
+        
+            # CATATAN KHUSUS
+            if data and data.get("catatan"):
+                st.markdown(
+                    "<div class='section-header'>⚠️ Catatan Penting</div>",
+                    unsafe_allow_html=True
+                )
+                catatan_text = data["catatan"].replace(
+                    "<strong>", "**"
+                ).replace("</strong>", "**")
+                st.warning(catatan_text)
+        
+            # Tombol Ganti Gambar
+            st.markdown("<div style='margin-top: 30px;'></div>", unsafe_allow_html=True)
+            if st.button("🔄 Ganti Gambar", use_container_width=True, type="primary"):
+                st.session_state.page = "upload"
+                st.rerun()
             
 # =========================================================
 # DISCLAIMER NOTICE & FOOTER
