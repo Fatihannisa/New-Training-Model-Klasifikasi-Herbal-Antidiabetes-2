@@ -1017,11 +1017,11 @@ elif st.session_state.page == "result":
                 ).replace("</strong>", "**")
                 st.warning(catatan_text)
         
-            # Tombol Ganti Gambar
-            st.markdown("<div style='margin-top: 30px;'></div>", unsafe_allow_html=True)
-            if st.button("🔄 Ganti Gambar", use_container_width=True, type="primary"):
-                st.session_state.page = "upload"
-                st.rerun()
+        # Tombol Ganti Gambar
+        st.markdown("<div style='margin-top: 30px;'></div>", unsafe_allow_html=True)
+        if st.button("🔄 Ganti Gambar", use_container_width=True, type="primary"):
+            st.session_state.page = "upload"
+            st.rerun()
             
 # =========================================================
 # DISCLAIMER NOTICE & FOOTER
