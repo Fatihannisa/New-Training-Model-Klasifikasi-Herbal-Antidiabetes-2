@@ -80,7 +80,7 @@ CONFIG = {
     "CLAHE_TILE": (4, 4),
     "VEIN_STRENGTH": 1.2,
     "CONF_HIGH": 0.50,          
-    "CONF_MIN": 0.28,          
+    "CONF_LOW": 0.28,          
     "ENTROPY_THRESHOLD": 1.75 
 }
 # OOD_THRESHOLD = 31.0
