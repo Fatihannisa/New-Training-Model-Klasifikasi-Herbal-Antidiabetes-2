@@ -81,7 +81,8 @@ CONFIG = {
     "VEIN_STRENGTH": 1.2,
     "CONF_HIGH": 0.50,          
     "CONF_LOW": 0.28,          
-    "ENTROPY_THRESHOLD": 1.75 
+    "ENTROPY_THRESHOLD": 1.75, 
+    "CONF_THRESHOLD": 0.70
 }
 # OOD_THRESHOLD = 31.0
 
