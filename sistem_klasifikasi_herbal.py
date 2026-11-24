@@ -79,8 +79,8 @@ CONFIG = {
     "CLAHE_CLIP": 4.0,
     "CLAHE_TILE": (4, 4),
     "VEIN_STRENGTH": 1.2,
-    "CONF_HIGH": 0.50,          
-    "CONF_LOW": 0.28,          
+    "CONF_HIGH": 0.45,          
+    "CONF_LOW": 0.15,          
     "ENTROPY_THRESHOLD": 1.75
 }
 # OOD_THRESHOLD = 31.0
@@ -922,6 +922,9 @@ elif st.session_state.page == "result":
                     <div style="display:flex; justify-content:space-between; align-items:baseline;">
                         <span style="font-size:16px; font-weight:600; color:#334155;">Kepercayaan Sistem:</span>
                         <span style="font-size:28px; font-weight:800; color:#047857; font-family:monospace;">{conf * 100:.2f}%</span>
+                    </div>
+                    <div style="text-align:right; font-size:12px; color:#64748b; font-family:monospace; margin-top:4px;">
+                        Skor Ketidakpastian (Entropy): {entropy:.4f}
                     </div>
                 </div>
             """, unsafe_allow_html=True)
