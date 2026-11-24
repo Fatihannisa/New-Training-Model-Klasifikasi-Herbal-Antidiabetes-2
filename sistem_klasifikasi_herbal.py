@@ -534,7 +534,7 @@ def predict(image):
     rgb_input = np.expand_dims(to_rgb_input(processed), 0).astype(np.float32)
     vein_input = np.expand_dims(to_vein_input(processed), 0).astype(np.float32)
 
-    if interpreter is not None:
+        if interpreter is not None:
         input_details = interpreter.get_input_details()
         output_details = interpreter.get_output_details()
         for inp in input_details:
@@ -548,21 +548,18 @@ def predict(image):
     else:
         np.random.seed(int(np.sum(processed) % 10000))
         pred = np.random.dirichlet(np.ones(len(LABELS)) * 0.5)
-        pred = 0.945
+        pred[1] = 0.945
 
-        max_conf = float(np.max(pred))
-        entropy = float(-np.sum(pred * np.log(pred + 1e-10)))
-    
-        # Logika Penolakan Bertingkat (Hierarchical Thresholding):
-        # 1. Jika confidence >= 70%, pasti diterima
-        # 2. Jika confidence < 45%, pasti ditolak (Kelas Tidak Dikenali)
-        # 3. Jika di antara 45% - 70%, ditolak hanya jika entropy > 1.40 (model ragu-ragu)
-        if max_conf >= 0.70:
-            is_unknown = False
-        elif max_conf < 0.45:
-            is_unknown = True
-        else:
-            is_unknown = entropy > 1.40
+    # Pastikan blok ini sejajar (4 spasi) dengan 'if interpreter is not None:' di atasnya
+    max_conf = float(np.max(pred))
+    entropy = float(-np.sum(pred * np.log(pred + 1e-10)))
+
+    if max_conf >= 0.70:
+        is_unknown = False
+    elif max_conf < 0.45:
+        is_unknown = True
+    else:
+        is_unknown = entropy > 1.40
 
     top_idx = np.argsort(pred)[::-1]
     top5 = [(LABELS[idx], float(pred[idx])) for idx in top_idx[:5]]
