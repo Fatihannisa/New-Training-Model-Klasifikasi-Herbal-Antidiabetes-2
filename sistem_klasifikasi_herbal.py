@@ -525,7 +525,9 @@ def predict(image):
     # Jika background sudah putih polos (seperti dataset), jangan dirusak dengan rembg!
     if is_white_background(img_bgr):
         processed = cv2.resize(img_bgr, CONFIG["IMG_SIZE"], interpolation=cv2.INTER_CUBIC)
-        processed = _sharpen_veins(processed)  # <-- Menyamakan ketajaman dengan data val Anda
+        processed = _normalize_brightness(processed)
+        processed = _clahe_lab(processed)
+        processed = _sharpen_veins(processed)
     else:
         processed = preprocess_camera_leaf(img_bgr)
         
