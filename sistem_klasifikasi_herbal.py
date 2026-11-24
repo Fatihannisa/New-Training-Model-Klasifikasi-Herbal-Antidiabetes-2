@@ -79,10 +79,11 @@ CONFIG = {
     "CLAHE_CLIP": 4.0,
     "CLAHE_TILE": (4, 4),
     "VEIN_STRENGTH": 1.2,
-    "CONF_THRESHOLD": 0.70,
-    "ENTROPY_THRESHOLD": 1.15
+    "CONF_HIGH": 0.50,          
+    "CONF_MIN": 0.28,          
+    "ENTROPY_THRESHOLD": 1.75 
 }
-OOD_THRESHOLD = 31.0
+# OOD_THRESHOLD = 31.0
 
 # =========================================================
 # DATABASE HERBAL DINAMIS
@@ -554,12 +555,12 @@ def predict(image):
     max_conf = float(np.max(pred))
     entropy = float(-np.sum(pred * np.log(pred + 1e-10)))
 
-    if max_conf >= 0.55:
+    if max_conf >= CONFIG["CONF_HIGH"]:
         is_unknown = False
-    elif max_conf < 0.15:
+    elif max_conf < CONFIG["CONF_LOW"]:
         is_unknown = True
     else:
-        is_unknown = entropy > 1.80
+        is_unknown = entropy > CONFIG["ENTROPY_THRESHOLD"]
 
     top_idx = np.argsort(pred)[::-1]
     top5 = [(LABELS[idx], float(pred[idx])) for idx in top_idx[:5]]
