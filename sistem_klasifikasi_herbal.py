@@ -1014,22 +1014,22 @@ elif st.session_state.page == "result":
             else:
                 st.write("*(Tanaman ini merupakan tanaman pembanding dan tidak memiliki tata cara pengolahan ramuan antidiabetes).*")
         
-            # CATATAN KHUSUS
-            if data and data.get("catatan"):
-                st.markdown(
-                    "<div class='section-header'>⚠️ Catatan Penting</div>",
-                    unsafe_allow_html=True
-                )
-                catatan_text = data["catatan"].replace(
-                    "<strong>", "**"
-                ).replace("</strong>", "**")
-                st.warning(catatan_text)
+        # CATATAN KHUSUS
+        if data and data.get("catatan"):
+            st.markdown(
+                "<div class='section-header'>⚠️ Catatan Penting</div>",
+                unsafe_allow_html=True
+            )
+            catatan_text = data["catatan"].replace(
+                "<strong>", "**"
+            ).replace("</strong>", "**")
+            st.warning(catatan_text)
             
-            # Tombol Ganti Gambar
-            st.markdown("<div style='margin-top: 30px;'></div>", unsafe_allow_html=True)
-            if st.button("🔄 Ganti Gambar", use_container_width=True, type="primary"):
-                st.session_state.page = "upload"
-                st.rerun()
+        # Tombol Ganti Gambar
+        st.markdown("<div style='margin-top: 30px;'></div>", unsafe_allow_html=True)
+        if st.button("🔄 Ganti Gambar", use_container_width=True, type="primary"):
+            st.session_state.page = "upload"
+            st.rerun()
             
 # =========================================================
 # DISCLAIMER NOTICE & FOOTER
