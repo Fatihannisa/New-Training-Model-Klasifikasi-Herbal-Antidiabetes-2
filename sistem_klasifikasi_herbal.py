@@ -525,6 +525,7 @@ def predict(image):
     # Jika background sudah putih polos (seperti dataset), jangan dirusak dengan rembg!
     if is_white_background(img_bgr):
         processed = cv2.resize(img_bgr, CONFIG["IMG_SIZE"], interpolation=cv2.INTER_CUBIC)
+        processed = _sharpen_veins(processed)  # <-- Menyamakan ketajaman dengan data val Anda
     else:
         processed = preprocess_camera_leaf(img_bgr)
         
@@ -541,7 +542,7 @@ def predict(image):
             elif "vein" in name:
                 interpreter.set_tensor(inp["index"], vein_input)
         interpreter.invoke()
-        pred = interpreter.get_tensor(output_details["index"])
+        pred = interpreter.get_tensor(output_details[0]["index"])[0]
     else:
         np.random.seed(int(np.sum(processed) % 10000))
         pred = np.random.dirichlet(np.ones(len(LABELS)) * 0.5)
