@@ -535,35 +535,35 @@ def predict(image):
     vein_input = np.expand_dims(to_vein_input(processed), 0).astype(np.float32)
 
         if interpreter is not None:
-        input_details = interpreter.get_input_details()
-        output_details = interpreter.get_output_details()
-        for inp in input_details:
-            name = inp["name"].lower()
-            if "rgb" in name:
-                interpreter.set_tensor(inp["index"], rgb_input)
-            elif "vein" in name:
-                interpreter.set_tensor(inp["index"], vein_input)
-        interpreter.invoke()
-        pred = interpreter.get_tensor(output_details[0]["index"])[0]
-    else:
-        np.random.seed(int(np.sum(processed) % 10000))
-        pred = np.random.dirichlet(np.ones(len(LABELS)) * 0.5)
-        pred[1] = 0.945
-
-    # Pastikan blok ini sejajar (4 spasi) dengan 'if interpreter is not None:' di atasnya
-    max_conf = float(np.max(pred))
-    entropy = float(-np.sum(pred * np.log(pred + 1e-10)))
-
-    if max_conf >= 0.70:
-        is_unknown = False
-    elif max_conf < 0.45:
-        is_unknown = True
-    else:
-        is_unknown = entropy > 1.40
-
-    top_idx = np.argsort(pred)[::-1]
-    top5 = [(LABELS[idx], float(pred[idx])) for idx in top_idx[:5]]
-    return top5, is_unknown, entropy
+            input_details = interpreter.get_input_details()
+            output_details = interpreter.get_output_details()
+            for inp in input_details:
+                name = inp["name"].lower()
+                if "rgb" in name:
+                    interpreter.set_tensor(inp["index"], rgb_input)
+                elif "vein" in name:
+                    interpreter.set_tensor(inp["index"], vein_input)
+            interpreter.invoke()
+            pred = interpreter.get_tensor(output_details[0]["index"])[0]
+        else:
+            np.random.seed(int(np.sum(processed) % 10000))
+            pred = np.random.dirichlet(np.ones(len(LABELS)) * 0.5)
+            pred[1] = 0.945
+    
+        # Pastikan blok ini sejajar (4 spasi) dengan 'if interpreter is not None:' di atasnya
+        max_conf = float(np.max(pred))
+        entropy = float(-np.sum(pred * np.log(pred + 1e-10)))
+    
+        if max_conf >= 0.70:
+            is_unknown = False
+        elif max_conf < 0.45:
+            is_unknown = True
+        else:
+            is_unknown = entropy > 1.40
+    
+        top_idx = np.argsort(pred)[::-1]
+        top5 = [(LABELS[idx], float(pred[idx])) for idx in top_idx[:5]]
+        return top5, is_unknown, entropy
     
 # =========================================================
 # STYLING CUSTOM CSS
