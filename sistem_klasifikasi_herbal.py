@@ -550,9 +550,19 @@ def predict(image):
         pred = np.random.dirichlet(np.ones(len(LABELS)) * 0.5)
         pred = 0.945
 
-    max_conf = float(np.max(pred))
-    entropy = float(-np.sum(pred * np.log(pred + 1e-10)))
-    is_unknown = (max_conf < CONFIG["CONF_THRESHOLD"]) or (entropy > CONFIG["ENTROPY_THRESHOLD"])
+        max_conf = float(np.max(pred))
+        entropy = float(-np.sum(pred * np.log(pred + 1e-10)))
+    
+        # Logika Penolakan Bertingkat (Hierarchical Thresholding):
+        # 1. Jika confidence >= 70%, pasti diterima
+        # 2. Jika confidence < 45%, pasti ditolak (Kelas Tidak Dikenali)
+        # 3. Jika di antara 45% - 70%, ditolak hanya jika entropy > 1.40 (model ragu-ragu)
+        if max_conf >= 0.70:
+            is_unknown = False
+        elif max_conf < 0.45:
+            is_unknown = True
+        else:
+            is_unknown = entropy > 1.40
 
     top_idx = np.argsort(pred)[::-1]
     top5 = [(LABELS[idx], float(pred[idx])) for idx in top_idx[:5]]
