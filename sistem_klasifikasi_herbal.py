@@ -81,8 +81,7 @@ CONFIG = {
     "VEIN_STRENGTH": 1.2,
     "CONF_HIGH": 0.50,          
     "CONF_LOW": 0.28,          
-    "ENTROPY_THRESHOLD": 1.75, 
-    "CONF_THRESHOLD": 0.70
+    "ENTROPY_THRESHOLD": 1.75
 }
 # OOD_THRESHOLD = 31.0
 
@@ -860,7 +859,7 @@ elif st.session_state.page == "result":
                     </p>
                     <hr style="border-top:1px solid #f1f5f9; margin:12px 0;">
                     <div style="font-size:13px; color:#64748b; font-family:monospace;">
-                        Kepercayaan Tertinggi: {top5[0][1] * 100:.2f}% (Min: {CONFIG['CONF_THRESHOLD']*100:.0f}%) • 
+                        Kepercayaan Tertinggi: {top5[0][1] * 100:.2f}% (Min: {CONFIG['CONF_LOW']*100:.0f}%) • 
                         Entropy: {entropy:.2f} (Maks: {CONFIG['ENTROPY_THRESHOLD']})
                     </div>
                 </div>
